@@ -1,0 +1,33 @@
+{
+  "name": "arduino-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./arduino/arduino.js",
+    "arduino": "node ./arduino/arduino.js",
+    "server": "nodemon --watch ./ --ignore ./arduino",
+    "css": "node-sass dashboard/sass/style.scss dashboard/sass/style.css --output-style expanded --source-map true && postcss -r dashboard/sass/style.css",
+    "live": "node-sass dashboard/sass/style.scss dashboard/sass/style.css --output-style compressed --source-map true && postcss -r dashboard/sass/style.css",
+    "compile": "npm run css && node-sass dashboard/sass/style.scss dashboard/sass/style.css --recursive --watch --output-style expanded && postcss -r dashboard/sass/style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "johnny-five": "^1.0.0",
+    "mongoose": "^5.4.19",
+    "node-fetch": "^2.3.0",
+    "nodemon": "^1.18.10",
+    "serialport": "^7.1.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "bootstrap": "^4.3.1",
+    "css-mqpacker": "^7.0.0",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.2",
+    "postcss-preset-env": "^6.6.0",
+    "postcss-sort-alphabetically": "^1.1.1"
+  }
+}
