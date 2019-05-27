@@ -1,3 +1,14 @@
+$primary:#2D011F;
+$secondary:#C72E42;
+
 $theme-colors: (
-  "primary": red,
+  "primary": $primary,
+  "secondary":$secondary,
 );
+
+
+$primaryFont:'Muli';
+
+
+$secondaryFont:'Lato';
+

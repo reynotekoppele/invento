@@ -1,0 +1,27 @@
+.header{
+  .nav{
+
+  }
+  .banner{
+    padding:20px;
+    background: $primary url('../img/bg-banner.svg');
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    .banner-right{
+      text-align:right;
+      .banner-text{
+        max-width:60%;
+        float:right;
+      }
+    }
+    .header-content{
+    color:white;
+      min-height:350px;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
