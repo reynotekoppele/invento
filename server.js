@@ -5,7 +5,7 @@ const routeSave = require("./api/routes/Save");
 const routeDelete = require("./api/routes/Delete");
 
 /* ----- Database ----- */
-const dbUrl = "mongodb://localhost:27017/arduino";
+const dbUrl = "mongodb://invento:invento@reynotekoppele.nl:27017/arduino";
 mongoose.connect(dbUrl, {useNewUrlParser: true});
 
 const db = mongoose.connection;
