@@ -14,17 +14,17 @@
         filter: url(#filter-2);
       }
     </style>
-    <filter id="filter" x="938.094" y="-507" width="1235.626" height="989.688" filterUnits="userSpaceOnUse">
+    <filter id="filter" x="859.094" y="-507" width="1235.626" height="989.688" filterUnits="userSpaceOnUse">
       <feFlood result="flood" flood-color="#c72e42"/>
       <feComposite result="composite" operator="in" in2="SourceGraphic"/>
       <feBlend result="blend" in2="SourceGraphic"/>
     </filter>
-    <filter id="filter-2" x="1302.72" y="-224.781" width="1235.31" height="989.75" filterUnits="userSpaceOnUse">
+    <filter id="filter-2" x="1223.72" y="-224.781" width="1235.31" height="989.75" filterUnits="userSpaceOnUse">
       <feFlood result="flood" flood-color="#c72e42"/>
       <feComposite result="composite" operator="in" in2="SourceGraphic"/>
       <feBlend result="blend" in2="SourceGraphic"/>
     </filter>
   </defs>
-  <path class="cls-1" d="M938.107-109.1L1811.55-506.989,2173.71,84.789,1300.27,482.675Z"/>
-  <path id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-2" d="M1302.73,173.152l873.24-397.934,362.05,591.8L1664.78,764.953Z"/>
+  <path class="cls-1" d="M859.107-109.1L1732.55-506.989,2094.71,84.789,1221.27,482.675Z"/>
+  <path id="Rectangle_1_copy" data-name="Rectangle 1 copy" class="cls-2" d="M1223.73,173.152l873.24-397.934,362.05,591.8L1585.78,764.953Z"/>
 </svg>

@@ -1,6 +1,5 @@
 .header{
   .nav{
-
   }
   .banner{
     padding:20px;
@@ -8,6 +7,14 @@
     background-position:center;
     background-size:cover;
     background-repeat: no-repeat;
+
+    .banner-left{
+      .moreinfo{
+        display:flex;
+        flex-direction: column;
+        width:50%;
+      }
+    }
 
     .banner-right{
       text-align:right;
@@ -18,7 +25,7 @@
     }
     .header-content{
     color:white;
-      min-height:350px;
+      min-height:200px;
       align-items: center;
       display: flex;
       flex-direction: row;
