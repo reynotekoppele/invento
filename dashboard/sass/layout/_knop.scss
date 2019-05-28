@@ -4,6 +4,7 @@
   .center-button {
     justify-content: center;
     .knop {
+      text-decoration: none;
       transition: all 200ms ease-out;
       margin: 20px;
       background-color: white;
@@ -18,7 +19,6 @@
         background-color:#C72E42;
         color:white;
         border-radius: 0 30px 0 30px;
-
       }
     }
     .add-button {

@@ -1,0 +1,32 @@
+.other-bg {
+  .introductie-content {
+    padding: 50px 0 20px 50px;
+    color: $primary;
+    .test{
+      margin: 0 40px 0 0;
+    }
+    .lampen {
+      .press-buttons {
+        border: 1px solid grey;
+        border-radius: 30px;
+        margin: 20px;
+
+        .button-ja {
+          padding: 25px;
+          justify-content: center;
+          display: flex;
+          flex-direction: row;
+
+          .widget-button {
+            margin: 20px;
+          }
+        }
+      }
+    }
+    .content{
+      width:60%;
+      padding:0 0 20px 0;
+      border-bottom:1px solid white;
+    }
+  }
+}

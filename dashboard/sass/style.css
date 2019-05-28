@@ -9603,6 +9603,11 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: white;
+  text-decoration: none;
+}
+
 ul, li {
   list-style: none;
 }
@@ -9629,8 +9634,17 @@ section p {
   padding: 6px 20px;
 }
 
+.breadcrumb-item.active {
+  color: #2D011F;
+}
+
 .active {
   color: #2D011F;
+}
+
+.other-bg .bg-yes {
+  background-color: #BCCBC9;
+  background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
 }
 
 .sidebar {
@@ -9704,13 +9718,17 @@ section p {
 }
 
 .bg-yes {
-  background-color: #62122C;
+  background-color: #BCCBC9;
   background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
 }
 
 .bg-yes .introductie-content {
   color: #2D011F;
   padding: 50px 0 20px 50px;
+}
+
+.bg-yes .introductie-content .test {
+  margin: 0 40px 0 0;
 }
 
 .bg-yes .introductie-content .content {
@@ -9735,6 +9753,7 @@ section p {
   justify-content: center;
   margin: 20px;
   text-align: center;
+  text-decoration: none;
   transition: all 200ms ease-out;
 }
 
@@ -9777,5 +9796,37 @@ section p {
 
 .yup {
   margin: 10px;
+}
+
+.other-bg .introductie-content {
+  color: #2D011F;
+  padding: 50px 0 20px 50px;
+}
+
+.other-bg .introductie-content .test {
+  margin: 0 40px 0 0;
+}
+
+.other-bg .introductie-content .lampen .press-buttons {
+  border: 1px solid grey;
+  border-radius: 30px;
+  margin: 20px;
+}
+
+.other-bg .introductie-content .lampen .press-buttons .button-ja {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 25px;
+}
+
+.other-bg .introductie-content .lampen .press-buttons .button-ja .widget-button {
+  margin: 20px;
+}
+
+.other-bg .introductie-content .content {
+  border-bottom: 1px solid white;
+  padding: 0 0 20px 0;
+  width: 60%;
 }
 /*# sourceMappingURL=style.css.map */
