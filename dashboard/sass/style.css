@@ -9705,9 +9705,7 @@ section p {
 
 .bg-yes {
   background-color: #62122C;
-  /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
-  /* Standard syntax (must be last) */
 }
 
 .bg-yes .introductie-content {
