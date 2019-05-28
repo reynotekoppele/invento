@@ -1,6 +1,12 @@
-.knoppen{
-  .knoppen-content{
-    width:60%;
-    padding:50px;
+.bg-yes {
+  background-color:#62122C; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #BCCBC9 , #C1DFD9); /* Standard syntax (must be last) */
+  .introductie-content {
+    padding: 50px 0 20px 50px;
+    color:$primary;
+    .content{
+color:#848584;
+    }
   }
 }
+
