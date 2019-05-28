@@ -1,0 +1,51 @@
+html{
+  font-size:15px;
+}
+
+body{
+  overflow-x: hidden;
+  font-family: $primaryFont, $secondaryFont, Arial;
+  background-color:#F5F5F5;
+}
+
+h1,h2,h3,h4,h5{
+
+}
+
+p{
+}
+
+a{
+  text-decoration: none;
+  color:grey;
+}
+
+ul,li{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  height:auto;
+}
+
+.logo{
+  width:60%;
+}
+
+section h1,h2,h3,h4,h5{
+  font-weight: 800;
+}
+
+section p{
+  color:grey;
+}
+
+.btn{
+  border-radius: 20px;
+  padding: 6px 20px;
+}
+
+.active{
+  color:$primary;
+}
