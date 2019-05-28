@@ -17,14 +17,14 @@ const showMessage = (id, action) => {
     user_id: "5ca1ef88c055f98d521044c5",
   };
 
-  fetch("http://localhost:3000/api/save/entry", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  }).catch(error => console.log(error));
+  // fetch("http://localhost:3000/api/save/entry", {
+  //   method: "POST",
+  //   headers: {
+  //     Accept: "application/json",
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(data),
+  // }).catch(error => console.log(error));
 };
 
 board.on("ready", () => {
@@ -62,7 +62,7 @@ board.on("ready", () => {
       livingroom.toggleLightsOnOff();
       bedroom.toggleLightsOnOff();
 
-      showMessage("One", "Toggle Light Living- and Bedroom");
+      showMessage("A", "Toggle Light Living- and Bedroom");
     },
     // Alle lampen
     two: () => {
@@ -85,17 +85,17 @@ board.on("ready", () => {
         kitchen.unlockDoor();
       }
 
-      showMessage("Two", "Toggle all lights / Lock Door");
+      showMessage("B", "Toggle all lights / Lock Door");
     },
     // Keuken
     three: () => {
       kitchen.toggleLightsOnOff();
-      showMessage("Three", "Toggle light Kitchen");
+      showMessage("C", "Toggle light Kitchen");
     },
     // Deur
     four: () => {
       kitchen.toggleDoorOpenClose();
-      showMessage("Four", "Open and Close Door");
+      showMessage("D", "Open and Close Door");
     },
   };
 
@@ -112,15 +112,15 @@ board.on("ready", () => {
   buttonFour.on("down", actions.four);
 
   // Updates from website
-  setInterval(() => {
-    fetch("http://localhost:3000/api/result/action")
-      .then(response => response.json())
-      .then(results =>
-        results.map(result => {
-          actions[result.name]();
-          fetch(`http://localhost:3000/api/delete/action/${result._id}`);
-        })
-      )
-      .catch(error => console.log(error));
-  }, 5000);
+  // setInterval(() => {
+  //   fetch("http://localhost:3000/api/result/action")
+  //     .then(response => response.json())
+  //     .then(results =>
+  //       results.map(result => {
+  //         actions[result.name]();
+  //         fetch(`http://localhost:3000/api/delete/action/${result._id}`);
+  //       })
+  //     )
+  //     .catch(error => console.log(error));
+  // }, 5000);
 });
