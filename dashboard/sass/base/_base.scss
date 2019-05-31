@@ -18,6 +18,9 @@ p{
 a{
   text-decoration: none;
   color:grey;
+  &:hover{
+    text-decoration: none;
+  }
 }
 
 ul,li{
@@ -46,6 +49,17 @@ section p{
   padding: 6px 20px;
 }
 
+.breadcrumb-item.active{
+  color:$primary;
+}
+
 .active{
   color:$primary;
+}
+
+.other-bg{
+  .bg-yes {
+    background-color: #BCCBC9;
+    background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
+  }
 }
