@@ -10488,6 +10488,7 @@ section p {
 
 .connection {
   text-align: center;
+  justify-content: center;
 }
 
 .connection-info {
