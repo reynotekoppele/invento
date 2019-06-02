@@ -10400,6 +10400,14 @@ section p {
   width: 50%;
 }
 
+.header .banner .banner-left .moreinfo-abonnement {
+  display: flex;
+  flex-direction: column;
+  width: 12%;
+  text-align: center;
+  border: 1px solid #F8F9FA;
+}
+
 .header .banner .banner-right {
   text-align: right;
 }
@@ -10516,6 +10524,40 @@ section p {
 .sidebar .connection-avatar .avatar {
   height: 102%;
   width: 120%;
+}
+
+.card-abo {
+  border-radius: 25px;
+  text-align: center;
+  padding: 0px;
+}
+
+.card-active {
+  /* used for abonnementen */
+  position: relative;
+  top: -50px;
+  overflow: hidden;
+  border: 1px solid var(--warning);
+  padding-bottom: 70px;
+}
+
+.card-active h2 {
+  color: var(--secondary);
+  text-align: center;
+}
+
+.btn-white {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  width: 75%;
+  align-self: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.btn-white:hover {
+  background-color: var(--secondary);
+  color: white;
 }
 
 .footer {
