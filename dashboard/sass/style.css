@@ -9874,3 +9874,7 @@ section p {
 .card-settings__btn {
   float: right;
 }
+
+#notificatiebox {
+  background-color: green;
+}
