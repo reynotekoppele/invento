@@ -1,0 +1,65 @@
+html{
+  font-size:15px;
+}
+
+body{
+  overflow-x: hidden;
+  font-family: $primaryFont, $secondaryFont, Arial;
+  background-color:#F5F5F5;
+}
+
+h1,h2,h3,h4,h5{
+
+}
+
+p{
+}
+
+a{
+  text-decoration: none;
+  color:grey;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+ul,li{
+  list-style: none;
+}
+
+img{
+  width: 100%;
+  height:auto;
+}
+
+.logo{
+  width:60%;
+}
+
+section h1,h2,h3,h4,h5{
+  font-weight: 800;
+}
+
+section p{
+  color:grey;
+}
+
+.btn{
+  border-radius: 20px;
+  padding: 6px 20px;
+}
+
+.breadcrumb-item.active{
+  color:$primary;
+}
+
+.active{
+  color:$primary;
+}
+
+.other-bg{
+  .bg-yes {
+    background-color: #BCCBC9;
+    background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
+  }
+}
