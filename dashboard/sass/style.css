@@ -9546,6 +9546,10 @@ section p {
   background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
 }
 
+.far {
+  font-size: 30px;
+}
+
 .sidebar {
   padding: 20px;
   font-size: 20px;
@@ -9714,27 +9718,41 @@ section p {
   margin: 0 40px 0 0;
 }
 
-.other-bg .introductie-content .lampen .press-buttons {
+.other-bg .introductie-content .lampen {
+  background: url(../img/lamp.gif) #0a031d;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 60%;
+  background-position: left 200px center;
+  height: 30vh;
+  border-radius: 25px;
+}
+
+.other-bg .introductie-content .lampen .broken-lamp {
+  color: white;
+  padding: 50px;
+}
+
+.other-bg .introductie-content .press-buttons {
   border: 1px solid grey;
   border-radius: 30px;
   margin: 20px;
 }
 
-.other-bg .introductie-content .lampen .press-buttons .button-ja {
+.other-bg .introductie-content .press-buttons .button-ja {
   padding: 25px;
   justify-content: center;
   display: flex;
   flex-direction: row;
 }
 
-.other-bg .introductie-content .lampen .press-buttons .button-ja .widget-button {
+.other-bg .introductie-content .press-buttons .button-ja .widget-button {
   margin: 20px;
 }
 
 .other-bg .introductie-content .content {
-  width: 60%;
   padding: 0 0 20px 0;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid #c72e42; */
 }
 
 .login__wrapper {
