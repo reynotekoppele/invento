@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node ./arduino/arduino.js",
     "arduino": "node ./arduino/arduino.js",
-    "server": "nodemon --watch ./ --ignore ./arduino",
+    "server": "nodemon --watch ./dashboard --ignore ./arduino --ext js,json,scss,html",
     "css": "node-sass dashboard/sass/style.scss dashboard/sass/style.css --output-style expanded --source-map true && postcss -r dashboard/sass/style.css",
     "live": "node-sass dashboard/sass/style.scss dashboard/sass/style.css --output-style compressed --source-map true && postcss -r dashboard/sass/style.css",
     "compile": "npm run css && node-sass dashboard/sass/style.scss dashboard/sass/style.css --recursive --watch --output-style expanded && postcss -r dashboard/sass/style.css"
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "express": "^4.16.4",
     "johnny-five": "^1.0.0",
     "mongoose": "^5.5.11",

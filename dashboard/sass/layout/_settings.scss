@@ -1,0 +1,75 @@
+.settings {
+  &__wrapper {
+    height: 100vh;
+    background: $primary;
+  }
+}
+
+.card {
+  padding: 30px 50px;
+  border-radius: $borderRadius;
+
+  &__header {
+    margin: 0 0 30px;
+  }
+
+  &__title {
+    position: relative;
+    padding: 0 0 15px;
+
+    &:before {
+      background: $secondary;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 92px;
+    }
+  }
+
+  &__progress {
+    text-align: right;
+  }
+
+  &__circle {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+  }
+
+  &__selector {
+    text-indent: 9999px;
+    border-radius: 50%;
+    border: 1px solid $secondary;
+    width: 10px;
+    height: 10px;
+    background: none;
+    padding: 0;
+    transition: background-color 0.25s $primaryTransition;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &--active {
+      background: $secondary;
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &--visible {
+      display: block;
+    }
+  }
+
+  &__footer {
+    margin: 30px 0 0;
+  }
+
+  &__btn {
+    float: right;
+  }
+}
