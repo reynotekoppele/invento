@@ -1,3 +1,10 @@
-var matches = container.querySelectorAll(".breadcrumb-item");
+const breadcrumbItems = document.querySelectorAll(".breadcrumb-item");
+const dashboardContent = document.querySelectorAll (".dashboard-content");
 
-functie
+breadcrumbItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+        dashboardContent.forEach(item => item.classList.remove("dashboard-content-visible"));
+        dashboardContent[index].classList.add("dashboard-content-visible");
+    });
+});
+

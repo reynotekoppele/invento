@@ -14,3 +14,10 @@
   }
 }
 
+.dashboard-content{
+  display:none;
+
+  &-visible{
+    display:block;
+  }
+}
