@@ -9977,7 +9977,86 @@ section p {
   float: right;
 }
 
+.card-abo {
+  border-radius: 25px;
+  padding: 0px;
+  text-align: center;
+}
+
+.card-abo.card-active {
+  border: 1px solid #ffc107;
+  border: 1px solid var(--warning);
+  overflow: hidden;
+  padding-bottom: 70px;
+  position: relative;
+  top: -50px;
+}
+
+.card-abo.card-active h2 {
+  color: #c72e42;
+  color: var(--secondary);
+  text-align: center;
+}
+
+.btn-white {
+  align-self: center;
+  border: 2px solid #c72e42;
+  border: 2px solid var(--secondary);
+  color: #c72e42;
+  color: var(--secondary);
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 75%;
+}
+
+.btn-white:hover {
+  background-color: #c72e42;
+  background-color: var(--secondary);
+  color: white;
+}
+
 #notificatiebox {
   background-color: green;
+}
+
+.connection {
+  justify-content: center;
+  text-align: center;
+}
+
+.connection-info {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding-top: 75px;
+}
+
+.connection-info h3 {
+  color: #2D011F;
+}
+
+.connection-info.connection-add:hover {
+  background-color: #C72E42;
+  cursor: pointer;
+}
+
+.connection-info.connection-add:hover h3 {
+  color: #ffffff;
+}
+
+.connection-avatar {
+  border-radius: 100px;
+  height: 150px;
+  margin: 20px auto;
+  margin-bottom: -50px;
+  overflow: hidden;
+  position: relative;
+  top: 75px;
+  width: 150px;
+  z-index: 999;
+}
+
+.sidebar .connection-avatar .avatar {
+  height: 102%;
+  width: 120%;
 }
 /*# sourceMappingURL=style.css.map */
