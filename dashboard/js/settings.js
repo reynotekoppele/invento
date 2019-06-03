@@ -1,8 +1,8 @@
 window.onload = () => {
-  const cardCounter = document.querySelector(".card__counter");
-  const cardSelectors = document.querySelectorAll(".card__selector");
-  const cardContent = document.querySelectorAll(".card__content");
-  const cardBtn = document.querySelector(".card__btn");
+  const cardCounter = document.querySelector(".card-settings__counter");
+  const cardSelectors = document.querySelectorAll(".card-settings__selector");
+  const cardContent = document.querySelectorAll(".card-settings__content");
+  const cardBtn = document.querySelector(".card-settings__btn");
 
   cardBtn.addEventListener("click", () => {
     const target = ++cardCounter.dataset.counter;
@@ -24,13 +24,13 @@ showCardContent = args => {
   cardCounter.innerHTML = target;
 
   cardContent.forEach(content =>
-    content.classList.remove("card__content--visible")
+    content.classList.remove("card-settings__content--visible")
   );
 
   cardSelectors.forEach(selector =>
-    selector.classList.remove("card__selector--active")
+    selector.classList.remove("card-settings__selector--active")
   );
 
-  cardContent[target - 1].classList.add("card__content--visible");
-  cardSelectors[target - 1].classList.add("card__selector--active");
+  cardContent[target - 1].classList.add("card-settings__content--visible");
+  cardSelectors[target - 1].classList.add("card-settings__selector--active");
 };
