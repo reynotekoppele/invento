@@ -13,6 +13,7 @@ router.post("/login", async (request, response) => {
         response.json({
           status: true,
           message: "Login succesvol",
+          id: user._id,
           firstTime: user.firstTime,
           nicename: user.nicename,
           subscription: user.subscription,
