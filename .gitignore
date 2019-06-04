@@ -4,3 +4,4 @@ node_modules
 .vscode
 dashboard/sass/style.css
 dashboard/sass/style.css.map
+.idea/*
