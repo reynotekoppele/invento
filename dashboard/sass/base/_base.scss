@@ -1,69 +1,109 @@
-html{
-  font-size:15px;
+html {
+  font-size: 15px;
+  &.large {
+    font-size: 18px;
+  }
+  &.medium {
+    font-size: 15px;
+  }
+  &.small {
+    font-size: 12px;
+  }
 }
 
-body{
+body {
   overflow-x: hidden;
   font-family: $primaryFont, $secondaryFont, Arial;
-  background-color:#F5F5F5;
+  background-color: #f5f5f5;
 }
 
-h1,h2,h3,h4,h5{
-
+h1,
+h2,
+h3,
+h4,
+h5 {
 }
 
-p{
+p {
 }
 
-a{
+a {
   text-decoration: none;
-  color:grey;
-  &:hover{
+  color: grey;
+  &:hover {
     text-decoration: none;
   }
 }
 
-ul,li{
+ul,
+li {
   list-style: none;
 }
 
-img{
+img {
   width: 100%;
-  height:auto;
+  height: auto;
 }
 
-.logo{
-  width:60%;
+.logo {
+  width: 60%;
 }
 
-section h1,h2,h3,h4,h5{
+section h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 800;
 }
 
-section p{
-  color:grey;
+section p {
+  color: grey;
 }
 
-.btn{
+.btn {
   border-radius: 20px;
   padding: 6px 20px;
 }
 
-.breadcrumb-item.active{
-  color:$primary;
+.breadcrumb-item.active {
+  color: $primary;
 }
 
-.active{
-  color:$primary;
+.active {
+  color: $primary;
 }
 
-.other-bg{
+.other-bg {
   .bg-yes {
-    background-color: #BCCBC9;
-    background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
+    background-color: #bccbc9;
+    background-image: linear-gradient(to right, #bccbc9, #c1dfd9);
   }
 }
 
-.far{
-  font-size:30px;
+.far {
+  font-size: 30px;
+}
+
+input {
+  border: 1px solid #dbdbdb;
+  border-radius: $borderRadius;
+  outline: 0;
+  padding: 10px 20px;
+  margin: 0 0 30px;
+  width: 100%;
+  transition: border 0.25s $primaryTransition, padding 0.25s $primaryTransition;
+
+  &:focus {
+    border-color: #9b9b9b;
+    padding: 10px 20px 10px 25px;
+  }
+
+  &--valid {
+    border-color: #2ecc40;
+  }
+
+  &--invalid {
+    border-color: #ff4136;
+  }
 }

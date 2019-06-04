@@ -9492,10 +9492,22 @@ html {
   font-size: 15px;
 }
 
+html.large {
+  font-size: 18px;
+}
+
+html.medium {
+  font-size: 15px;
+}
+
+html.small {
+  font-size: 12px;
+}
+
 body {
   overflow-x: hidden;
   font-family: "Muli", "Lato", Arial;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 a {
@@ -9507,7 +9519,8 @@ a:hover {
   text-decoration: none;
 }
 
-ul, li {
+ul,
+li {
   list-style: none;
 }
 
@@ -9520,7 +9533,11 @@ img {
   width: 60%;
 }
 
-section h1, h2, h3, h4, h5 {
+section h1,
+h2,
+h3,
+h4,
+h5 {
   font-weight: 800;
 }
 
@@ -9542,12 +9559,35 @@ section p {
 }
 
 .other-bg .bg-yes {
-  background-color: #BCCBC9;
-  background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
+  background-color: #bccbc9;
+  background-image: linear-gradient(to right, #bccbc9, #c1dfd9);
 }
 
 .far {
   font-size: 30px;
+}
+
+input {
+  border: 1px solid #dbdbdb;
+  border-radius: 25px;
+  outline: 0;
+  padding: 10px 20px;
+  margin: 0 0 30px;
+  width: 100%;
+  transition: border 0.25s ease-in-out, padding 0.25s ease-in-out;
+}
+
+input:focus {
+  border-color: #9b9b9b;
+  padding: 10px 20px 10px 25px;
+}
+
+input--valid {
+  border-color: #2ecc40;
+}
+
+input--invalid {
+  border-color: #ff4136;
 }
 
 .sidebar {
@@ -9799,29 +9839,6 @@ section p {
   display: block;
 }
 
-.login__input {
-  border: 1px solid #dbdbdb;
-  border-radius: 25px;
-  outline: 0;
-  padding: 10px 20px;
-  margin: 0 0 30px;
-  width: 100%;
-  transition: border 0.25s ease-in-out, padding 0.25s ease-in-out;
-}
-
-.login__input:focus {
-  border-color: #9b9b9b;
-  padding: 10px 20px 10px 25px;
-}
-
-.login__input--valid {
-  border-color: #2ecc40;
-}
-
-.login__input--invalid {
-  border-color: #ff4136;
-}
-
 .login__submit {
   float: right;
 }
@@ -9901,8 +9918,18 @@ section p {
   float: right;
 }
 
-.height-dummie {
-  background-color: rgba(0, 0, 0, 0) !important;
+.thead-dark {
+  background-color: #2d011f;
+}
+
+.moreinfo-abonnement {
+  width: 14%;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.row .abo-padding {
+  padding-right: 100px;
 }
 
 .cardbody-height {
@@ -9910,17 +9937,23 @@ section p {
   max-height: 100px;
 }
 
+.abo-title-middle {
+  padding-top: 0.75rem;
+}
+
 .card-abo {
   border-radius: 25px 25px 0 0;
   text-align: center;
   padding: 0px;
   position: relative;
-  bottom: -25px;
+  bottom: -45px;
+  width: 100%;
 }
 
 .card-abo.card-active {
-  position: relative;
+  position: absolute;
   overflow: hidden;
+  top: -50px;
   border: 1px solid var(--secondary);
 }
 
@@ -9943,6 +9976,21 @@ section p {
   color: white;
 }
 
+@media (max-width: 992px) {
+  .card-abo {
+    border-radius: 25px;
+    bottom: 0px;
+    padding-top: 10px;
+  }
+  .card-abo.card-active {
+    position: relative;
+    top: 0px;
+  }
+  .row .abo-padding {
+    padding-right: 0px;
+  }
+}
+
 #notificatiebox {
   background-color: #f5f5f5;
   border-radius: 10px;
@@ -9963,7 +10011,7 @@ section p {
 
 .connection-info {
   background-color: #ffffff;
-  padding-top: 75px;
+  padding-top: 70px;
   border-radius: 25px;
 }
 
@@ -9982,7 +10030,7 @@ section p {
 
 .connection-avatar {
   position: relative;
-  margin-bottom: -50px;
+  top: 75px;
   overflow: hidden;
   width: 150px;
   height: 150px;
