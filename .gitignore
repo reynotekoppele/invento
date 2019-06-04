@@ -2,3 +2,5 @@ credentials.js
 node_modules
 .DS_Store
 .vscode
+dashboard/sass/style.css
+dashboard/sass/style.css.map

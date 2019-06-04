@@ -16,6 +16,7 @@ const userSchema = new mongoose.Schema(
     house: {type: String},
     fontSize: {type: String},
     experience: {type: Boolean},
+    subscription: {type: String},
     role_id: mongoose.Schema.Types.ObjectId,
   },
   {
