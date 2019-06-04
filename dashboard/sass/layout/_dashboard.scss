@@ -1,9 +1,10 @@
+.content-dashboard-yea{
+  .dashboard-content {
+    display: none;
 
-.dashboard-content{
-  display:none;
-
-  &-visible{
-    display:block;
+    &-visible {
+      display: block;
+    }
   }
 }
 
