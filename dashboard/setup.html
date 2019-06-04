@@ -69,146 +69,97 @@
             </div>
           </div>
         </nav>
-        <div class="banner">
-          <div class="container">
-            <section class="header-content">
-              <div class="banner-left col-md-6 col-12">
-                <h1>Kies je sfeer.</h1>
-              </div>
-              <div class="banner-right col-md-6 col-12">
-                <div class="banner-text">
-                  <h4>Best living together, with Invento..</h4>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
       </header>
-
-      <div class="container-fluid">
+      <div class="container-fluid setup">
         <div class="row">
-          <nav class=" col-md-2 col-sm-12 bg-light sidebar">
-            <div class="round_avatar">
-              <img src="img/lidewij.png" class="avatar" />
-            </div>
-            <div class="sidebar-sticky align-items-stretch">
-              <ul class="navi-sidebar nav flex-column">
-                <li class="nav-item active">
-                  <a class="nav-link active" href="index.html">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-home"
+          <div
+            class="setup__wrapper col-12 d-flex align-items-center justify-content-center"
+          >
+            <div class="card-setup card-setup--visible col-5">
+              <div class="card-setup__header d-flex align-items-center">
+                <h2 class="card-setup__title col-6">
+                  Stap
+                  <span class="card-setup__counter" data-counter="1">1</span>
+                </h2>
+                <ul class="card-setup__progress col-6">
+                  <li class="card-setup__circle">
+                    <button
+                      class="card-setup__selector card-setup__selector--active"
+                      data-target="1"
                     >
-                      <path
-                        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                      ></path>
-                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    Mijn huis <span class="sr-only">(current)</span>
-                  </a>
-                </li>
+                      1
+                    </button>
+                  </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="connecties.html">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-users"
-                    >
-                      <path
-                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                      ></path>
-                      <circle cx="9" cy="7" r="4"></circle>
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    Connecties
-                  </a>
-                </li>
-              </ul>
-              <div class="navi-sidebar">
-                <h6
-                  class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"
-                >
-                  <span class="instellingen">Instellingen</span>
-                  <a class="d-flex align-items-center" href="instellingen.html">
-                  </a>
-                </h6>
-                <ul class="nav flex-column mb-2">
-                  <li class="nav-item">
-                    <a class="nav-link" href="instellingen.html">
-                      Algemeen
-                    </a>
+                  <li class="card-setup__circle">
+                    <button class="card-setup__selector" data-target="2">
+                      2
+                    </button>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="instellingen.html">
-                      Lampen
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sferen.html">
-                      Sferen
-                    </a>
+                  <li class="card-setup__circle">
+                    <button class="card-setup__selector" data-target="3">
+                      3
+                    </button>
                   </li>
                 </ul>
               </div>
-            </div>
-          </nav>
-
-          <div class="col-md-10 bg-yes">
-            <section class="col-6 introductie-content">
-              <h3>Kies je sfeer.</h3>
-              <p class="content">
-                Kies hieronder je sfeer of maak een nieuwe sfeer aan.
-              </p>
-            </section>
-            <div class="wrapper">
-              <div class="center-button row">
-                <div class="knop col-md-3">
-                  <a class="btn-knop">
-                    <h4>Welterusten!</h4>
-                  </a>
+              <div class="card-setup__content card-setup__content--visible">
+                <h3 class="card-setup__subtitle">Vul uw huisnaam in</h3>
+                <input
+                  type="text"
+                  class="card-setup__answer card-setup__answer--house"
+                  placeholder="Hoe wilt u dat uw huis heet..."
+                />
+              </div>
+              <div class="card-setup__content">
+                <h3 class="card-setup__subtitle">
+                  Hoe groot wilt u uw tekst?
+                </h3>
+                <button
+                  class="card-setup__answer card-setup__answer--text"
+                  data-size="large"
+                >
+                  Groot
+                </button>
+                <button
+                  class="card-setup__answer card-setup__answer--text"
+                  data-size="medium"
+                >
+                  Middel
+                </button>
+                <button
+                  class="card-setup__answer card-setup__answer--text"
+                  data-size="small"
+                >
+                  Klein
+                </button>
+                <div class="card-setup__example">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Veritatis, sint inventore sunt non voluptates quod eaque at
+                  dolores esse fugiat recusandae excepturi voluptatibus neque
+                  cupiditate vero maxime totam, cumque ipsa!
                 </div>
-                <div class="knop col-md-3">
-                  <h4>Goedemorgen!</h4>
-                </div>
-
-                <div class="add-button col-md-3">
-                  <a href="sferen-sub.html">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="44"
-                      height="44"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-plus-circle"
-                    >
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <line x1="12" y1="8" x2="12" y2="16"></line>
-                      <line x1="8" y1="12" x2="16" y2="12"></line>
-                    </svg>
-                    <h4 class="sfeerlink">Sfeer toevoegen</h4>
-                  </a>
-                </div>
+              </div>
+              <div class="card-setup__content">
+                <h3 class="card-setup__subtitle">
+                  Kies wat voor u van toepassing is
+                </h3>
+                <button
+                  class="card-setup__answer card-setup__answer--experience"
+                  data-experience="false"
+                >
+                  NOOB</button
+                ><button
+                  class="card-setup__answer card-setup__answer--experience"
+                  data-experience="true"
+                >
+                  PRO
+                </button>
+              </div>
+              <div class="card-setup__footer clearfix">
+                <button class="card-setup__btn btn btn-secondary">
+                  Volgende
+                </button>
               </div>
             </div>
           </div>
@@ -216,31 +167,11 @@
       </div>
     </main>
 
-    <footer class="footer mt-auto py-4">
-      <div class="container">
-        <span class=""> Makes.living much.easier.</span>
-      </div>
-    </footer>
-
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-    <!--<script> var winWidth = $(window).width();-->
-    <!--function sidebarWidth(){-->
-    <!--if(winWidth>875px){-->
-    <!--$('.nav.sidebar').removeClass('col-md-2');-->
-    <!--$('.nav.sidebar').addClass('col-md-12');-->
-    <!--} else {-->
-    <!--$('.nav.sidebar').removeClass('col-md-2');-->
-    <!--$('.nav.sidebar').addClass('col-md-12');-->
-    <!--};-->
-    <!--};-->
-
-    <!--sidebarWidth();-->
-
-    <!--$(document).resize(function(){-->
-    <!--sidebarWidth();-->
-    <!--});</script>-->
+    <script src="js/js-cookie.min.js"></script>
+    <script src="js/setup-switcher.js"></script>
+    <script src="js/setup-questions.js"></script>
   </body>
 </html>

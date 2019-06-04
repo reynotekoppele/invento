@@ -1,17 +1,35 @@
-.wrap-abo {
-  margin: 0;
+.moreinfo-abonnement {
+  width: 14%;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.row .abo-padding {
+  padding-right: 100px;
+}
+
+.cardbody-height {
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.abo-title-middle {
+  padding-top: 0.75rem;
 }
 
 .card-abo {
   border-radius: 25px 25px 0 0;
   text-align: center;
   padding: 0px;
+  position: relative;
+  bottom: -45px;
+  width: 100%;
 
   &.card-active {
-    position: relative;
-    top: -50px;
+    position: absolute;
     overflow: hidden;
-    border: 1px solid var(--warning);
+    top: -50px;
+    border: 1px solid var(--secondary);
 
 
     h2 {
@@ -26,11 +44,29 @@
   color: var(--secondary);
   width: 75%;
   align-self: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
 }
 
 .btn-white:hover {
   background-color: var(--secondary);
   color: white;
+}
+
+@media (max-width: 992px) {
+.card-abo {
+  border-radius: 25px;
+  bottom: 0px;
+  padding-top: 10px;
+
+  &.card-active {
+    position: relative;
+    top: 0px;
+  }
+}
+
+.row .abo-padding {
+  padding-right: 0px;
+}
 }
