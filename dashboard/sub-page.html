@@ -70,7 +70,7 @@
                     <img src="img/lidewij.png" class="avatar">
                 </div>
                 <div class="sidebar-sticky align-items-stretch">
-                    <ul class="navi-sidebar nav flex-column">
+                    <ul class="navi-sidebar sidebar-nav-top nav flex-column">
                         <li class="nav-item active">
                             <a class="nav-link active"
                                href="index.html">
@@ -128,6 +128,12 @@
 
 
             <div class="col-md-10 other-bg">
+                <nav class="row back-to-home" style="padding:20px; background-color:#EEF1F9;">
+                    <button type="button" class="btn btn-outline-info"><i class="fas fa-chevron-left"></i> Terug naar
+                        mijn huis
+                    </button>
+
+                </nav>
                 <div class="row float-right">
                     <nav class="test" aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -141,75 +147,83 @@
                     <section class="introductie-content dashboard-content dashboard-content-visible">
                         <div class="row">
                             <div class="col-md-8">
-                                <h2>Woonkamer</h2>
+                                <h2 class="woonkamer-hr">Woonkamer</h2>
                                 <p class="content">
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                    ligula eget
-                                    dolor. Aenean massa.
-                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-                                    mus.
-                                    Donec quam felis, ultricies nec.</p>
+                                    Welkom terug in uw prachtige woonkamer! De dagstand staat geactiveerd. Dit betekend
+                                    dat al je lampen in de woonkamer gedimd staan. Wil je lampen aan / uitschakelen dan
+                                    kan dit via de onderstaande buttons.
+                                </p>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="press-buttons col-md-5">
-                                <div class="button-ja">
-                                    <div class="button-info">
-                                        <h4>Staande lamp woonkamer.</h4>
-                                        <span> LAMP STAAN UIT </span>
-                                    </div>
-                                    <!--<button type="button" class="widget-button btn btn-dark btn-circle"><i class="far fa-lightbulb"></i></button>-->
+
+                        <div class="row header-lamp">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-info btn-lg" disabled>Bedien al je lampen.
+                                </button>
+
+                            </div>
+                            <div class="col-md-5">
+                                <h5 class="lamp-slogan"> Ja, ik wil mijn lampen uitzetten <i class="fas fa-chevron-right"></i></h5>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-dark button-glow">Zet de lampen uit</button>
+                            </div>
+                        </div>
+                        <div class="lamp-wrapper row">
+                            <div class="col-md-6 lampen">
+                                <div class="broken-lamp">
+                                    <h4> Vervang Lamp X </h4>
+                                    <p class="about-lamp">De lamp in de woonkamer moet worden vervangen, wil je weer
+                                        gebruik maken van lamp X koop dan een Led lamp.Hieronder wordt je doorverwezen
+                                        naar een pagina waar je led lampen kunt bestellen.</p>
+                                    <button type="button" class="btn btn-light">Ja, koop lamp</button>
+
                                 </div>
                             </div>
-                            <div class="press-buttons col-md-5">
-                                <div class="button-ja">
-                                    <div class="button-info">
-                                        <h4>Staande lamp woonkamer.</h4>
-                                        <span> LAMP STAAN UIT </span>
+                            <div class="col-md-6 losselamp">
+                            <div class="row">
+                                <div class="press-buttons col-md-10">
+                                    <div class="button-ja">
+                                        <div class="button-info">
+                                            <p class="info-button-progress">LAMP STAAT AAN</p>
+                                            <h4>Staande lamp woonkamer.</h4>
+                                            <button type="button" class="btn btn-outline-info">Zet lamp uit</button>
+
+                                        </div>
                                     </div>
-                                    <!--<button type="button" class="widget-button btn btn-warning btn-circle"><i class="far fa-lightbulb"></i></button>-->
                                 </div>
                             </div>
-                        </div>
-                        <div class="lampen">
-                            <div class="broken-lamp">
-                            <h4> Vervang Lamp X </h4>
-                                <p class="about-lamp">De lamp in de woonkamer moet worden vervangen, wil je weer gebruik maken van lamp X koop dan een Led lamp.Hieronder wordt je doorverwezen naar een pagina waar je led lampen kunt bestellen</p>
-                                <button type="button" class="btn btn-light">Ja, koop lamp</button>
+                            <div class="row">
+                                <div class="press-buttons col-md-10">
+                                    <div class="button-ja">
+                                        <div class="button-info">
 
+                                            <p class="info-button-progress">LAMP STAAT UIT</p>
+                                            <h4>Staande lamp woonkamer.</h4>
+                                            <button type="button" class="btn btn-outline-info">Zet lamp aan</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             </div>
                         </div>
 
+                        <div class="row header-lamp">
+                            <div class="col-md-3">
+                                <button type="button" class="btn btn-secondary btn-lg" disabled>Wil je alle deuren
+                                    dicht?
+                                </button>
 
-                            <!--<div class="row">-->
-                                <!--<div class="press-buttons col-md-4">-->
-                                    <!--<div class="button-ja">-->
 
-                                        <!--<div class="button-info">-->
-                                            <!--<h4>Mag deur 1 opslot?</h4>-->
-                                            <!--<span> Deur dicht</span>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="press-buttons col-md-3">-->
-                                    <!--<div class="button-ja">-->
-                                        <!--<div class="button-info">-->
-                                            <!--<h4>Mag deze deur opslot?</h4>-->
-                                            <!--<span> Deur dicht</span>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                                <!--<div class="press-buttons col-md-3">-->
-                                    <!--<div class="button-ja">-->
+                            </div>
+                            <div class="col-md-5">
+                                <h5 class="lamp-slogan"> Ja, ik wil mijn deuren opslot <i class="fas fa-chevron-right"></i></h5>
 
-                                        <!--<div class="button-info">-->
-                                            <!--<h4>Deur 3 is opslot!</h4>-->
-                                            <!--<span> Deur open</span>-->
-                                        <!--</div>-->
-                                    <!--</div>-->
-                                <!--</div>-->
-                            <!--</div>-->
-                        <!--</div>-->
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="btn btn-dark button-glow">Deur dichtdoen</button>
+                            </div>
+                        </div>
                     </section>
                     <section class="introductie-content dashboard-content">BOE</section>
                     <section class="introductie-content dashboard-content">YES</section>
@@ -232,6 +246,7 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/dashboard-switch.js"></script>
+<!--<script src="js/sidebar.js"></script>-->
 
 
 </body>
