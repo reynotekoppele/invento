@@ -1,12 +1,14 @@
-.height-dummie {
-  background-color: rgba(0, 0, 0, 0) !important;
-
+.row .abo-padding {
+  padding-right: 100px;
 }
-
 
 .cardbody-height {
   min-height: 100px;
   max-height: 100px;
+}
+
+.abo-title-middle {
+  padding-top: 0.75rem;
 }
 
 .card-abo {
@@ -14,11 +16,13 @@
   text-align: center;
   padding: 0px;
   position: relative;
-  bottom: -25px;
+  bottom: -45px;
+  width: 100%;
 
   &.card-active {
-    position: relative;
+    position: absolute;
     overflow: hidden;
+    top: -50px;
     border: 1px solid var(--secondary);
 
 
@@ -42,4 +46,21 @@
 .btn-white:hover {
   background-color: var(--secondary);
   color: white;
+}
+
+@media (max-width: 992px) {
+.card-abo {
+  border-radius: 25px;
+  bottom: 0px;
+  padding-top: 10px;
+
+  &.card-active {
+    position: relative;
+    top: 0px;
+  }
+}
+
+.row .abo-padding {
+  padding-right: 0px;
+}
 }
