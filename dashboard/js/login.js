@@ -43,7 +43,7 @@ const validateUser = async args => {
     if (status.status) {
       Cookies.set("user", JSON.stringify(status));
       status.firstTime
-        ? (window.location.href = "/instellingen.html")
+        ? (window.location.href = "/setup.html")
         : (window.location.href = "/");
     } else {
       errorField.innerHTML = status.message;

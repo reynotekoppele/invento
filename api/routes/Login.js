@@ -15,6 +15,7 @@ router.post("/login", async (request, response) => {
           message: "Login succesvol",
           firstTime: user.firstTime,
           nicename: user.nicename,
+          subscription: user.subscription,
         });
 
       const reasons = dbTypes.user.failedLogin;
