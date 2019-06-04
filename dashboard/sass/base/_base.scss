@@ -1,14 +1,5 @@
 html {
   font-size: 15px;
-  &.large {
-    font-size: 18px;
-  }
-  &.medium {
-    font-size: 15px;
-  }
-  &.small {
-    font-size: 12px;
-  }
 }
 
 body {
@@ -106,4 +97,14 @@ input {
   &--invalid {
     border-color: #ff4136;
   }
+}
+
+.large {
+  font-size: 18px;
+}
+.medium {
+  font-size: 15px;
+}
+.small {
+  font-size: 12px;
 }
