@@ -11,24 +11,31 @@
       background-size: cover;
       width: 60%;
       background-position: left 200px center;
-      height: 30vh;
+      min-height: 300px;
       border-radius: 25px;
       .broken-lamp{
         color:white;
         padding:50px;
+        .about-lamp{
+          width:70%;
+          margin: 20px 0;
+        }
       }
     }
       .press-buttons {
         border: 1px solid grey;
         border-radius: 30px;
         margin: 20px;
+        padding: 25px;
+        display: flex;
+        flex-direction: row;
+        background: url(../img/lamp2.gif) #fff;
+        background-position: right center;
+        background-size: 203px;
+        background-repeat: no-repeat;
 
         .button-ja {
-          padding: 25px;
-          justify-content: center;
-          display: flex;
-          flex-direction: row;
-
+          .button-info{padding:20px;}
           .widget-button {
             margin: 20px;
           }
@@ -38,6 +45,17 @@
       padding:0 0 20px 0;
       border-bottom:1px solid $secondary;
     }
+  }
+  .test{
+    margin:30px;
+  }
+  .bg-img-living{
+    background: url(../img/livingroom2.png);
+    background-size: 40%;
+    min-height: 313px;
+    background-repeat: no-repeat;
+    background-position: right;
+
   }
 }
 

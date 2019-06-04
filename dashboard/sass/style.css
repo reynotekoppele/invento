@@ -9724,7 +9724,7 @@ section p {
   background-size: cover;
   width: 60%;
   background-position: left 200px center;
-  height: 30vh;
+  min-height: 300px;
   border-radius: 25px;
 }
 
@@ -9733,17 +9733,26 @@ section p {
   padding: 50px;
 }
 
+.other-bg .introductie-content .lampen .broken-lamp .about-lamp {
+  width: 70%;
+  margin: 20px 0;
+}
+
 .other-bg .introductie-content .press-buttons {
   border: 1px solid grey;
   border-radius: 30px;
   margin: 20px;
-}
-
-.other-bg .introductie-content .press-buttons .button-ja {
   padding: 25px;
-  justify-content: center;
   display: flex;
   flex-direction: row;
+  background: url(../img/lamp2.gif) #fff;
+  background-position: right center;
+  background-size: 203px;
+  background-repeat: no-repeat;
+}
+
+.other-bg .introductie-content .press-buttons .button-ja .button-info {
+  padding: 20px;
 }
 
 .other-bg .introductie-content .press-buttons .button-ja .widget-button {
@@ -9752,7 +9761,19 @@ section p {
 
 .other-bg .introductie-content .content {
   padding: 0 0 20px 0;
-  /* border-bottom: 1px solid #c72e42; */
+  border-bottom: 1px solid #c72e42;
+}
+
+.other-bg .test {
+  margin: 30px;
+}
+
+.other-bg .bg-img-living {
+  background: url(../img/livingroom2.png);
+  background-size: 40%;
+  min-height: 313px;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .login__wrapper {
@@ -9988,19 +10009,6 @@ section p {
 .sidebar .connection-avatar .avatar {
   height: 102%;
   width: 120%;
-}
-
-#hulp-wrapper {
-  color: #2d011f;
-}
-
-#p-hulp {
-  margin-top: 5px;
-  color: #2d011f;
-}
-
-.text-hulp {
-  margin-top: 30px;
 }
 
 #hulp-wrapper {
