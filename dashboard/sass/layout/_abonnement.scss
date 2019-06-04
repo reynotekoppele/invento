@@ -1,0 +1,45 @@
+.height-dummie {
+  background-color: rgba(0, 0, 0, 0) !important;
+
+}
+
+
+.cardbody-height {
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.card-abo {
+  border-radius: 25px 25px 0 0;
+  text-align: center;
+  padding: 0px;
+  position: relative;
+  bottom: -25px;
+
+  &.card-active {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--secondary);
+
+
+    h2 {
+      color: var(--secondary);
+      text-align: center;
+    }
+  }
+}
+
+.btn-white {
+  border: 2px solid var(--secondary);
+  color: var(--secondary);
+  width: 75%;
+  align-self: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.btn-white:hover {
+  background-color: var(--secondary);
+  color: white;
+}
