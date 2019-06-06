@@ -1,8 +1,18 @@
 .sidebar{
   padding:20px;
   font-size:20px;
+  box-shadow: 1px 4px 12px 0px lightblue;
+  z-index: 9999;
   .navi-sidebar{
     padding:20px;
+    li.nav-item{
+      .nav-link{
+        @media only screen and (max-width: 1450px) {
+          font-size:15px;
+          padding:10px;
+        }
+      }
+    }
   }
   .round_avatar {
     overflow: hidden;
@@ -16,19 +26,41 @@
       height: 141px;
       width: 180px;
     }
+    @media only screen and (max-width: 1275px) {
+      width: 100px;
+      height: 100px;
+    }
+    @media only screen and (max-width: 1450px) {
+      font-size:15px;
+    }
+    @media only screen and (max-width: 795px) {
+      float:left;
+      width: 50px;
+      height:50px;
+    }
   }
   .instellingen{
     color:$primary;
     border: 2px solid $primary;
     padding: 2px 6px;
     font-weight: 700;
+    margin-top:40px;
     &:hover{
       transition: all 200ms ease-out;
       color:$secondary;
       border: 2px solid $secondary;
       padding: 2px 6px;
       font-weight: 700;
-
+    }
+    @media only screen and (max-width: 795px) {
+    margin-top:8px;
     }
   }
+  .mobile-navigatie{
+    @media only screen and (max-width: 795px) {
+     display:none;
+    }
+  }
+
 }
+

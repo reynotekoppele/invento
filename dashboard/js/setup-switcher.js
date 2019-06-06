@@ -1,7 +1,7 @@
-const cardCounter = document.querySelector(".card-settings__counter");
-const cardSelectors = document.querySelectorAll(".card-settings__selector");
-const cardContent = document.querySelectorAll(".card-settings__content");
-const cardBtn = document.querySelector(".card-settings__btn");
+const cardCounter = document.querySelector(".card-setup__counter");
+const cardSelectors = document.querySelectorAll(".card-setup__selector");
+const cardContent = document.querySelectorAll(".card-setup__content");
+const cardBtn = document.querySelector(".card-setup__btn");
 
 cardBtn.addEventListener("click", () => {
   const target = ++cardCounter.dataset.counter;
@@ -16,19 +16,46 @@ cardSelectors.forEach(selector =>
   })
 );
 
-showCardContent = args => {
+const showCardContent = args => {
   const {cardCounter, cardSelectors, cardContent, target} = args;
 
-  cardCounter.innerHTML = target;
+  if (target > cardContent.length) {
+    saveSettings();
+  } else {
+    cardCounter.innerHTML = target;
 
-  cardContent.forEach(content =>
-    content.classList.remove("card-settings__content--visible")
-  );
+    cardContent.forEach(content =>
+      content.classList.remove("card-setup__content--visible")
+    );
 
-  cardSelectors.forEach(selector =>
-    selector.classList.remove("card-settings__selector--active")
-  );
+    cardSelectors.forEach(selector =>
+      selector.classList.remove("card-setup__selector--active")
+    );
 
-  cardContent[target - 1].classList.add("card-settings__content--visible");
-  cardSelectors[target - 1].classList.add("card-settings__selector--active");
+    cardContent[target - 1].classList.add("card-setup__content--visible");
+    cardSelectors[target - 1].classList.add("card-setup__selector--active");
+  }
+};
+
+const saveSettings = () => {
+  const user = JSON.parse(Cookies.get("user"));
+
+  const data = {
+    _id: user.id,
+    firstTime: false,
+    house: selectedSettings.house,
+    fontSize: selectedSettings.text,
+    experience: selectedSettings.exp,
+  };
+
+  fetch("/api/update/user", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })
+    .then(() => (window.location.href = "/"))
+    .catch(error => console.log(error));
 };
