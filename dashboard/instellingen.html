@@ -9,6 +9,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script src="js/js-cookie.min.js"></script>
+    <script>
+      if (!Cookies.get("user")) {
+        window.location.href = "/login.html";
+      }
+    </script>
   </head>
   <body>
     <main role="main">
@@ -226,7 +232,5 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/settings-switcher.js"></script>
-    <script src="js/settings-questions.js"></script>
   </body>
 </html>
