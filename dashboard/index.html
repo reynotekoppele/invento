@@ -9,6 +9,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script src="js/js-cookie.min.js"></script>
+    <script>
+      if (!Cookies.get("user")) {
+        window.location.href = "/login.html";
+      }
+    </script>
   </head>
   <body>
     <main role="main">
@@ -73,7 +79,10 @@
           <div class="container">
             <section class="header-content">
               <div class="banner-left col-md-6 col-12">
-                <h1>Hallo, welkom terug Piet-Jan.</h1>
+                <h1>
+                  Hallo, welkom terug
+                  <span class="load-data" data-value="nicename"></span>.
+                </h1>
                 <span class="moreinfo">
                   Zorgverlener, Annie Smitzs Zorgorganisatie, Zinnzorg
                 </span>
@@ -159,7 +168,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="instellingen.html">
+                    <a class="nav-link" href="lampen.html">
                       Lampen
                     </a>
                   </li>
@@ -187,35 +196,58 @@
               <div class="center-button row">
                 <div class="knop col-md-3">
                   <a class="btn-knop" href="sub-page.html">
-                    <h4>woonkamer</h4>
+                    <img class="img-size-simul svg" src="img/living.svg" alt="livingroom">
+                    <h4 class="white-text">woonkamer</h4>
                   </a>
                 </div>
                 <div class="knop col-md-3">
-                  <h4>Keuken</h4>
+                  <img class="img-size-simul svg" src="img/kitchen.svg" alt="kitchen">
+                  <a class="btn-knop" href="sub-page.html">
+                    <h4 class="white-text">Keuken</h4>
+                  </a>
                 </div>
                 <div class="knop col-md-3">
-                  <h4>Slaapkamer</h4>
-                </div>
-              </div>
-              <div class="center-button row">
-                <div class="knop col-md-3">
-                  <h4>Badkamer</h4>
-                </div>
-                <div class="knop col-md-3">
-                  <h4>Slaapkamer</h4>
-                </div>
-                <div class="knop col-md-3">
-                  <h4>Wc</h4>
+                  <a class="btn-knop" href="sub-page.html">
+                    <img class="img-size-simul svg" src="img/bedroom.svg" alt="bedroom">
+                    <h4 class="white-text">Slaapkamer</h4>
+                  </a>
                 </div>
               </div>
               <div class="center-button row">
                 <div class="knop col-md-3">
-                  <h4>Hal</h4>
+                  <a class="btn-knop" href="sub-page.html">
+                    <img class="img-size-simul svg" src="img/bathroom.svg" alt="bathroom">
+                    <h4 class="white-text">Badkamer</h4>
+                </a>
                 </div>
                 <div class="knop col-md-3">
-                  <h4>Bijkeuken</h4>
+                  <a class="btn-knop" href="sub-page.html">
+                    <img class="img-size-simul svg" src="img/bedroom.svg" alt="sleeping">
+                    <h4 class="white-text">logeerkamer</h4>
+                  </a>
+                </div>
+                <div class="knop col-md-3">
+                  <a class="btn-knop" href="sub-page.html">
+                    <img class="img-size-simul svg" src="img/wc.svg" alt="toilet">
+                    <h4 class="white-text">Wc</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="center-button row">
+                <div class="knop col-md-3">
+                  <a class="btn-knop" href="sub-page.html">
+                    <img class="img-size-simul svg" src="img/hal.svg" alt="hal">
+                    <h4 class="white-text">Hal</h4>
+                  </a>
+                </div>
+                <div class="knop col-md-3">
+                  <a class="btn-knop" href="sub-page.html">
+                    <img class="img-size-simul svg" src="img/kitchen.svg" alt="scullery">
+                    <h4 class="white-text">Bijkeuken</h4>
+                  </a>
                 </div>
                 <div class="add-button col-md-3">
+                  <a class="btn-knop" href="sub-page.html">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="44"
@@ -233,6 +265,7 @@
                     <line x1="8" y1="12" x2="16" y2="12"></line>
                   </svg>
                   <h4>Kamer toevoegen</h4>
+                  </a>
                 </div>
               </div>
             </div>
@@ -250,22 +283,7 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-    <!--<script> var winWidth = $(window).width();-->
-    <!--function sidebarWidth(){-->
-    <!--if(winWidth>875px){-->
-    <!--$('.nav.sidebar').removeClass('col-md-2');-->
-    <!--$('.nav.sidebar').addClass('col-md-12');-->
-    <!--} else {-->
-    <!--$('.nav.sidebar').removeClass('col-md-2');-->
-    <!--$('.nav.sidebar').addClass('col-md-12');-->
-    <!--};-->
-    <!--};-->
-
-    <!--sidebarWidth();-->
-
-    <!--$(document).resize(function(){-->
-    <!--sidebarWidth();-->
-    <!--});</script>-->
+    <script src="js/svg_buttons.js"></script>
+    <script src="js/load-data.js"></script>
   </body>
 </html>

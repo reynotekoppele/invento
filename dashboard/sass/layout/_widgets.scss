@@ -2,9 +2,10 @@
   .introductie-content {
     padding: 50px;
     color: $primary;
-
     .test {
       margin: 30px 50px 0 50px;
+      right: 0;
+      position: absolute;
     }
     .lamp-wrapper {
       margin:20px 0;
