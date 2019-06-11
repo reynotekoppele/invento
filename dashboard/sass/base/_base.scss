@@ -32,7 +32,7 @@ li {
 }
 
 img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -58,7 +58,7 @@ section p {
 }
 
 .breadcrumb-item.active {
-  color: #24A2B6;
+  color: #24a2b6;
 }
 
 .active {
@@ -75,7 +75,6 @@ section p {
 .far {
   font-size: 30px;
 }
-
 
 input {
   border: 1px solid #dbdbdb;
