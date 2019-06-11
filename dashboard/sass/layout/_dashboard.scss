@@ -1,23 +1,10 @@
-.bg-yes {
-  background-color: #BCCBC9;
-  background-image: linear-gradient(to right, #BCCBC9, #C1DFD9);
-  .introductie-content {
-    padding: 50px 0 20px 50px;
-    color: $primary;
+.content-dashboard-yea{
+  .dashboard-content {
+    display: none;
 
-    .test{
-      margin: 0 40px 0 0;
-    }
-    .content {
-      color: #848584;
+    &-visible {
+      display: block;
     }
   }
 }
 
-.dashboard-content{
-  display:none;
-
-  &-visible{
-    display:block;
-  }
-}

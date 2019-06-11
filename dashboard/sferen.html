@@ -9,6 +9,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script src="js/js-cookie.min.js"></script>
+    <script>
+      if (!Cookies.get("user")) {
+        window.location.href = "/login.html";
+      }
+    </script>
   </head>
   <body>
     <main role="main">
@@ -187,24 +193,27 @@
                 <div class="knop col-md-3">
                   <h4>Goedemorgen!</h4>
                 </div>
+
                 <div class="add-button col-md-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-plus-circle"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                  </svg>
-                  <h4>Sfeer toevoegen</h4>
+                  <a href="sferen-sub.html">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="44"
+                      height="44"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-plus-circle"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="16"></line>
+                      <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                    <h4 class="sfeerlink">Sfeer toevoegen</h4>
+                  </a>
                 </div>
               </div>
             </div>

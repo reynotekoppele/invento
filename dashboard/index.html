@@ -9,6 +9,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script src="js/js-cookie.min.js"></script>
+    <script>
+      if (!Cookies.get("user")) {
+        window.location.href = "/login.html";
+      }
+    </script>
   </head>
   <body>
     <main role="main">
@@ -73,7 +79,10 @@
           <div class="container">
             <section class="header-content">
               <div class="banner-left col-md-6 col-12">
-                <h1>Hallo, welkom terug Piet-Jan.</h1>
+                <h1>
+                  Hallo, welkom terug
+                  <span class="load-data" data-value="nicename"></span>.
+                </h1>
                 <span class="moreinfo">
                   Zorgverlener, Annie Smitzs Zorgorganisatie, Zinnzorg
                 </span>
@@ -250,22 +259,6 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-    <!--<script> var winWidth = $(window).width();-->
-    <!--function sidebarWidth(){-->
-    <!--if(winWidth>875px){-->
-    <!--$('.nav.sidebar').removeClass('col-md-2');-->
-    <!--$('.nav.sidebar').addClass('col-md-12');-->
-    <!--} else {-->
-    <!--$('.nav.sidebar').removeClass('col-md-2');-->
-    <!--$('.nav.sidebar').addClass('col-md-12');-->
-    <!--};-->
-    <!--};-->
-
-    <!--sidebarWidth();-->
-
-    <!--$(document).resize(function(){-->
-    <!--sidebarWidth();-->
-    <!--});</script>-->
+    <script src="js/load-data.js"></script>
   </body>
 </html>

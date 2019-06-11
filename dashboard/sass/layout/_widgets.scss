@@ -1,42 +1,93 @@
 .other-bg {
   .introductie-content {
-    padding: 50px 0 20px 50px;
+    padding: 50px;
     color: $primary;
-    .test{
-      margin: 0 40px 0 0;
-    }
-    .lampen {
-      background: url(../img/lamp.gif) #0a031d;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 60%;
-      background-position: left 200px center;
-      height: 30vh;
-      border-radius: 25px;
-      .broken-lamp{
-        color:white;
-        padding:50px;
-      }
-    }
-      .press-buttons {
-        border: 1px solid grey;
-        border-radius: 30px;
-        margin: 20px;
 
-        .button-ja {
-          padding: 25px;
-          justify-content: center;
-          display: flex;
-          flex-direction: row;
+    .test {
+      margin: 30px 50px 0 50px;
+    }
+    .lamp-wrapper {
+      margin:20px 0;
+      .lampen {
+        background: url(../img/lamp.gif) #0a031d;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left 200px center;
+        min-height: 300px;
+        border-radius: 25px;
+        margin: 20px 0;
 
-          .widget-button {
-            margin: 20px;
+        .broken-lamp {
+          padding: 50px;
+          color: white;
+
+          .about-lamp {
+            width: 70%;
+            margin: 20px 0;
+            color: rgba(255, 255, 255, 0.55);
+
           }
         }
       }
-    .content{
-      padding:0 0 20px 0;
-      border-bottom:1px solid $secondary;
+    }
+    .press-buttons {
+      border: 1px solid grey;
+      border-radius: 30px;
+      margin: 20px;
+      padding: 25px;
+      display: flex;
+      flex-direction: row;
+      background: url(../img/lamp2.gif) #fff;
+      background-position: right center;
+      background-size: 203px;
+      background-repeat: no-repeat;
+
+      .button-ja {
+        .button-info {
+          padding: 20px;
+        }
+
+        .widget-button {
+          margin: 20px;
+        }
+      }
+    }
+
+    .woonkamer-hr {
+      border-left: 6px solid #C53245;
+      height: 35px;
+      padding: 0 0 0 7px;
+    }
+
+    .content {
+      padding: 0 0 20px 0;
+    }
+  }
+
+  .test {
+    margin: 50px;
+  }
+
+  .dashboard-content {
+    background: url(../img/livingroom2.png);
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: bottom -16px right -16px;
+
+    .header-lamp {
+      background-color: antiquewhite;
+      color: $primary;
+      padding: 50px;
+    }
+    .losselamp{
+      padding: 0 0 0 40px;
+      .info-button-progress{
+        letter-spacing:2px;
+        color:$secondary;
+      }
+    }
+    .lamp-slogan{
+      padding-top: 9px;
     }
   }
 }

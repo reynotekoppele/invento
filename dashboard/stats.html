@@ -9,7 +9,14 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script src="js/js-cookie.min.js"></script>
+    <script>
+      if (!Cookies.get("user")) {
+        window.location.href = "/login.html";
+      }
+    </script>
   </head>
+
   <body>
     <main role="main">
       <header class="header">
@@ -73,10 +80,8 @@
           <div class="container">
             <section class="header-content">
               <div class="banner-left col-md-6 col-12">
-                <h1>Hallo, welkom terug Piet-Jan.</h1>
-                <span class="moreinfo">
-                  Zorgverlener, Annie Smitzs Zorgorganisatie, Zinnzorg
-                </span>
+                <h1>Statistieken van Piet-Jan.</h1>
+                <span class="moreinfo"> </span>
               </div>
               <div class="banner-right col-md-6 col-12">
                 <div class="banner-text">
@@ -178,14 +183,22 @@
 
           <div class="col-md-10 bg-yes">
             <section class="col-6 introductie-content">
-              <h3>Bedien je huis.</h3>
-              <p class="content">
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-                penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus. Donec quam felis, ultricies nec.
-              </p>
+              <h3>Statistieken</h3>
             </section>
+            <div class="row justify-content-center">
+              <div class="col-lg-9 text-center">
+                <h2>Dagritme</h2>
+                <canvas id="mixChart"></canvas>
+              </div>
+              <div class="col-lg-6 text-center">
+                <h2>Chart Voorbeeld 2</h2>
+                <canvas id="mixChart2"></canvas>
+              </div>
+              <div class="col-lg-6 text-center">
+                <h2>Chart Voorbeeld 3</h2>
+                <canvas id="mixChart3"></canvas>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -200,6 +213,9 @@
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="js/script.js"></script>
 
     <!--<script> var winWidth = $(window).width();-->
     <!--function sidebarWidth(){-->

@@ -9,6 +9,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script src="js/js-cookie.min.js"></script>
   </head>
   <body>
     <main role="main">
@@ -70,78 +71,94 @@
           </div>
         </nav>
       </header>
-      <div class="container-fluid settings">
+      <div class="container-fluid setup">
         <div class="row">
           <div
-            class="settings__wrapper col-12 d-flex align-items-center justify-content-center"
+            class="setup__wrapper col-12 d-flex align-items-center justify-content-center"
           >
-            <div class="card-settings card-settings--visible col-5">
-              <div class="card-settings__header d-flex align-items-center">
-                <h2 class="card-settings__title col-6">
+            <div class="card-setup card-setup--visible col-5">
+              <div class="card-setup__header d-flex align-items-center">
+                <h2 class="card-setup__title col-6">
                   Stap
-                  <span class="card-settings__counter" data-counter="1">1</span>
+                  <span class="card-setup__counter" data-counter="1">1</span>
                 </h2>
-                <ul class="card-settings__progress col-6">
-                  <li class="card-settings__circle">
+                <ul class="card-setup__progress col-6">
+                  <li class="card-setup__circle">
                     <button
-                      class="card-settings__selector card-settings__selector--active"
+                      class="card-setup__selector card-setup__selector--active"
                       data-target="1"
                     >
                       1
                     </button>
                   </li>
 
-                  <li class="card-settings__circle">
-                    <button class="card-settings__selector" data-target="2">
+                  <li class="card-setup__circle">
+                    <button class="card-setup__selector" data-target="2">
                       2
                     </button>
                   </li>
-                  <li class="card-settings__circle">
-                    <button class="card-settings__selector" data-target="3">
+                  <li class="card-setup__circle">
+                    <button class="card-setup__selector" data-target="3">
                       3
                     </button>
                   </li>
                 </ul>
               </div>
-              <div
-                class="card-settings__content card-settings__content--visible"
-              >
-                <h3 class="card-settings__subtitle">Vul uw huisnaam in</h3>
+              <div class="card-setup__content card-setup__content--visible">
+                <h3 class="card-setup__subtitle">Vul uw huisnaam in</h3>
                 <input
                   type="text"
-                  class="card-settings__answer card-settings__answer--house"
+                  class="card-setup__answer card-setup__answer--house"
                   placeholder="Hoe wilt u dat uw huis heet..."
                 />
               </div>
-              <div class="card-settings__content">
-                <h3 class="card-settings__subtitle">
+              <div class="card-setup__content">
+                <h3 class="card-setup__subtitle">
                   Hoe groot wilt u uw tekst?
                 </h3>
                 <button
-                  class="card-settings__answer card-settings__answer--text"
+                  class="card-setup__answer card-setup__answer--text"
                   data-size="large"
                 >
                   Groot
                 </button>
                 <button
-                  class="card-settings__answer card-settings__answer--text"
+                  class="card-setup__answer card-setup__answer--text"
                   data-size="medium"
                 >
                   Middel
                 </button>
                 <button
-                  class="card-settings__answer card-settings__answer--text"
+                  class="card-setup__answer card-setup__answer--text"
                   data-size="small"
                 >
                   Klein
                 </button>
+                <div class="card-setup__example">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Veritatis, sint inventore sunt non voluptates quod eaque at
+                  dolores esse fugiat recusandae excepturi voluptatibus neque
+                  cupiditate vero maxime totam, cumque ipsa!
+                </div>
               </div>
-              <div class="card-settings__content">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident at accusantium
+              <div class="card-setup__content">
+                <h3 class="card-setup__subtitle">
+                  Kies wat voor u van toepassing is
+                </h3>
+                <button
+                  class="card-setup__answer card-setup__answer--experience"
+                  data-experience="false"
+                >
+                  NOOB</button
+                ><button
+                  class="card-setup__answer card-setup__answer--experience"
+                  data-experience="true"
+                >
+                  PRO
+                </button>
               </div>
-              <div class="card-settings__footer clearfix">
-                <button class="card-settings__btn btn btn-secondary">
+              <div class="card-setup__footer clearfix">
+                <button class="card-setup__btn btn btn-secondary">
                   Volgende
                 </button>
               </div>
