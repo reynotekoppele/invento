@@ -17,8 +17,19 @@
       flex-direction: column;
       &:hover{
         background-color:#C72E42;
+        fill:white;
         color:white;
         border-radius: 0 30px 0 30px;
+        .white-text{
+          color:white;
+        }
+      }
+      .img-size-simul{
+        margin:0 auto;
+        width:70px;
+        &:hover{
+          fill: white;
+        }
       }
     }
     .add-button {
