@@ -9,6 +9,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <script src="js/js-cookie.min.js"></script>
+    <script>
+      if (!Cookies.get("user")) {
+        window.location.href = "/login.html";
+      }
+    </script>
   </head>
   <body>
     <main role="main">
@@ -159,7 +165,7 @@
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="instellingen.html">
+                    <a class="nav-link" href="lampen.html">
                       Lampen
                     </a>
                   </li>
