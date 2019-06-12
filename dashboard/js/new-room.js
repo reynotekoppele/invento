@@ -49,9 +49,6 @@ saveBtn.addEventListener( 'click', async() => {
 
   console.log(result);
 
-  // fetch('/api/result/user')
-  //   .then(response => response.json())
-  //   .then(result => console.log(result))
 }  );
 
 
