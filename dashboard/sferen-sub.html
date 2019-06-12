@@ -183,49 +183,67 @@
                 Kies hieronder je sfeer of maak een nieuwe sfeer aan.
               </p>
             </section>
-            <section class="col-6 introductie-content">
+            <section class="col-6 introductie-content" id="kiesapparaat">
               <h5>
-                <label>1. Geef je sfeer een naam</label> <br />
-                <input class="w3-input" type="text" />
+                <label>1. Geef je sfeer een naam</label>
+                <input class="w3-input" type="text" id="inputsfeer"/>
               </h5>
             </section>
 
-            <div class="wrapper">
-              <div class="center-button row">
-                <h5>2. Kies je instellingen</h5>
+            <section class="col-6 introductie-content" id="kiesapparaat">
+                <h5>
+                  <label>2. Kies je apparaten</label>
+                </h5>
+              </section>
 
-                <div class="knop col-md-3">
-                  <a class="btn-knop">
-                    <h4>Welterusten!</h4>
-                  </a>
+            
+                <div class="wrapper" id="apparatensfeer">
+                    <div class="center-button row">
+                      <div class="knop col-md-3" id="buttonsfeer" tabindex="0">
+                        <a class="btn-knop">
+                          <img class="img-size-simul svg" src="img/light.svg" alt="light">
+                          <h4 class="white-text">Leeslamp</h4>
+                        </a>
+                      </div>
+                      <div class="knop col-md-3" id="buttonsfeer" tabindex="1">
+                        <img class="img-size-simul svg" src="img/hanginglight.svg" alt="hanginglight">
+                        <a class="btn-knop">
+                          <h4 class="white-text">Hanglamp</h4>
+                        </a>
+                      </div>
+                      <div class="knop col-md-3" id="buttonsfeer" tabindex="0">
+                        <a class="btn-knop">
+                          <img class="img-size-simul svg" src="img/standinglamp.svg" alt="standinglight">
+                          <h4 class="white-text">Staande lamp</h4>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="center-button row" >
+                      <div class="knop col-md-3" id="buttonsfeer" tabindex="0">
+                        <a class="btn-knop">
+                          <img class="img-size-simul svg" src="img/luxaflex.svg" alt="luxaflex">
+                          <h4 class="white-text">Gordijn Slaapkamer</h4>
+                      </a>
+                      </div>
+                      <div class="knop col-md-3" id="buttonsfeer" tabindex="0">
+                        <a class="btn-knop">
+                          <img class="img-size-simul svg" src="img/curtain.svg" alt="curtain">
+                          <h4 class="white-text">Gordijn Woonkamer</h4>
+                        </a>
+                      </div>
+                      <div class="knop col-md-3" id="buttonsfeer" tabindex="0">
+                        <a class="btn-knop">
+                          <img class="img-size-simul svg" src="img/door.svg" alt="frontdoor">
+                          <h4 class="white-text">Voordeur</h4>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="knop col-md-3">
-                  <h4>Goedemorgen!</h4>
-                </div>
-                <div class="add-button col-md-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-plus-circle"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                  </svg>
-                  <h4>Sfeer toevoegen</h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
+
+            
     </main>
 
     <footer class="footer mt-auto py-4">
