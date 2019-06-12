@@ -11,6 +11,7 @@ window.onload = () => {
   nameField.addEventListener("focusout", () =>
     validateFieldEmpty(event.target)
   );
+
   passField.addEventListener("focusout", () =>
     validateFieldEmpty(event.target)
   );
@@ -38,10 +39,13 @@ const validateUser = async args => {
       body: JSON.stringify({username, password}),
     })).json();
 
-    console.log(status);
+    const role = await (await fetch(
+      `/api/result/role/_id/${status.role_id}`
+    )).json();
 
     if (status.status) {
       Cookies.set("user", JSON.stringify(status));
+      Cookies.set("role", JSON.stringify(role));
       status.firstTime
         ? (window.location.href = "/setup.html")
         : (window.location.href = "/");
