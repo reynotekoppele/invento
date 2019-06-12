@@ -5,6 +5,7 @@ const Action = require("./actionSchema")();
 const Device = require("./deviceSchema")();
 const Role = require("./roleSchema")();
 const Queue = require("./queueSchema")();
+const Room = require("./roomSchema")();
 
 const dbTypes = {
   entry: Entry,
@@ -14,6 +15,7 @@ const dbTypes = {
   device: Device,
   role: Role,
   queue: Queue,
+  room: Room,
 };
 
 module.exports = dbTypes;
