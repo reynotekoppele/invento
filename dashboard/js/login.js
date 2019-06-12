@@ -11,6 +11,7 @@ window.onload = () => {
   nameField.addEventListener("focusout", () =>
     validateFieldEmpty(event.target)
   );
+
   passField.addEventListener("focusout", () =>
     validateFieldEmpty(event.target)
   );

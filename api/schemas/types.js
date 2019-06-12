@@ -15,7 +15,7 @@ const dbTypes = {
   device: Device,
   role: Role,
   queue: Queue,
-  room: Room.
+  room: Room,
 };
 
 module.exports = dbTypes;
