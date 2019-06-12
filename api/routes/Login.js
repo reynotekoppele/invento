@@ -18,6 +18,7 @@ router.post("/login", async (request, response) => {
           nicename: user.nicename,
           subscription: user.subscription,
           fontSize: user.fontSize,
+          role_id: user.role_id,
         });
 
       const reasons = dbTypes.user.failedLogin;
