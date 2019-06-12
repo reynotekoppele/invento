@@ -5,6 +5,7 @@ const roomSchema = new mongoose.Schema(
     name: String,
     icon: String,
     devices: Array,
+    user_id: mongoose.Schema.Types.ObjectId,
   },
   {
     collection: "rooms",
