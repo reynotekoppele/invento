@@ -9,6 +9,7 @@ Deselecteren icon
 4. De geselecteerde icon ophalen
 4. url van de afbeelding
 5. Data opslaan
+6. huidige gebruiker ophalen
 
 1. class verwijderen van alle icons
 2. voeg class toe aan de click
@@ -19,10 +20,38 @@ const saveBtn = document.querySelector('.save-room');
 const icons = document.querySelectorAll('.input-icon > img');
 
 
-saveBtn.addEventListener( 'click', () => {
+saveBtn.addEventListener( 'click', async() => {
   const name = nameInput.value;
   const savedIcon = document.querySelector('.icon-active').src;
-  console.log(savedIcon);
+  const user =
+    JSON.parse(
+    Cookies.get('user')
+);
+
+  // console.log(user);
+
+  const data = {
+    name: name,
+    icon: savedIcon,
+    user_id: user.id,
+  };
+
+  // console.log(data);
+
+  const result = await (await fetch("/api/save/room", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  })).json();
+
+  console.log(result);
+
+  // fetch('/api/result/user')
+  //   .then(response => response.json())
+  //   .then(result => console.log(result))
 }  );
 
 
