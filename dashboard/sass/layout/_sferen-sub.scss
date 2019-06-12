@@ -3,6 +3,7 @@
   fill: white;
   color: white;
   border-radius: 0 30px 0 30px;
+  outline: none;
 }
 
 #apparatensfeer {
@@ -20,4 +21,8 @@
 #inputsfeer {
   margin-left: 0px;
   margin-top: 25px;
+}
+
+#sfeerbutton {
+  margin-left: 80px;
 }
