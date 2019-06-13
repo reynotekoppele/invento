@@ -112,15 +112,18 @@ board.on("ready", () => {
   buttonFour.on("down", actions.four);
 
   // Updates from website
-  // setInterval(() => {
-  //   fetch("http://localhost:3000/api/result/action")
-  //     .then(response => response.json())
-  //     .then(results =>
-  //       results.map(result => {
-  //         actions[result.name]();
-  //         fetch(`http://localhost:3000/api/delete/action/${result._id}`);
-  //       })
-  //     )
-  //     .catch(error => console.log(error));
-  // }, 5000);
+  setInterval(() => {
+    fetch("http://reynotekoppele.nl/invento/api/result/queue")
+      .then(response => response.json())
+      .then(results =>
+        results.map(result => {
+          console.log(result);
+          actions[result.name]();
+          fetch(
+            `http://reynotekoppele.nl/invento/api/delete/queue/${result._id}`
+          );
+        })
+      )
+      .catch(error => console.log(error));
+  }, 5000);
 });
