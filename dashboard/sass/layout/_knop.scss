@@ -23,7 +23,7 @@
           color:white;
         }
         .img-size-simul {
-          fill: white;
+          filter:brightness(0) invert(1);
         }
       }
       .img-size-simul{
