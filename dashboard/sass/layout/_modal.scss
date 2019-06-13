@@ -1,23 +1,24 @@
 .modal {
   .modal-content {
-    .modal-header {}
+    .modal-header {
+    }
     .modal-body {
       padding: 44px;
-      ul{ padding:0;
-        text-align: center;
+    }
+    ul {
+      padding: 0;
+      text-align: center;
       li.input-icon {
         display: inline-block;
-        margin:0 auto;
-
+        margin: 0 auto;
         img {
-          width:45px;
+          width: 45px;
           margin: 10px;
-          &.icon-active{
-            background-color:red;
+          &.icon-active {
+            background-color: red;
           }
         }
       }
-    }
     }
   }
 }
