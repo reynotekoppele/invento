@@ -183,51 +183,31 @@
                 Voeg hier een apparaat toe, en maak groepen aan.
               </p>
             </section>
-            <div class="wrapper">
-              <div class="center-button row">
-                <div class="knop col-md-3">
-                  <a class="btn-knop">
-                      <img class="img-size-simul svg" src="img/hanginglight.svg" alt="hanginglight">
-                    <h4>Grote lamp keuken</h4>
-                  </a>
-                </div>
-                <div class="knop col-md-3">
-                    <img class="img-size-simul svg" src="img/light.svg" alt="curtain">
-                  <h4>Kleine lampen keuken</h4>
-                </div>
-                <div class="knop col-md-3">
-                    <img class="img-size-simul svg" src="img/door.svg" alt="frontdoor">
-                  <h4>Voordeur</h4>
-                </div>
-                <div class="knop col-md-3">
-                    <img class="img-size-simul svg" src="img/hanginglight.svg" alt="hanginglight">
-
-                  <h4>Grote lamp huiskamer</h4>
-                </div>
-                <div class="knop col-md-3">
-                    <img class="img-size-simul svg" src="img/standinglamp.svg" alt="standinglight">
-                  <h4>Sfeer lamp huiskamer</h4>
-                </div>
-                <div class="add-button col-md-3" data-toggle="modal" data-target="#exampleModal">
-                
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-plus-circle"
+            <div class="wrapper" id="devices">
+                <div class="center-button row">
+                  <div
+                    class="add-button col-md-3"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
                   >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                  </svg>
-                  <h4>Apparaat toevoegen</h4>
-                </div>
+                    Apparaat toevoegen
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="44"
+                      height="44"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-plus-circle"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="8" x2="12" y2="16"></line>
+                      <line x1="8" y1="12" x2="16" y2="12"></line>
+                    </svg>
+                  </div>
                 </div>
               </div>
             </div>
@@ -261,10 +241,10 @@
   
               <h6>Kies uw icoon</h6>
               <ul>
-                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
-                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
-                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
-                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
+                <li class="input-icon"><img class="" src="img/light.svg" alt="Kleine Lamp"></li>
+                <li class="input-icon"><img class="" src="img/hanginglight.svg" alt="Grote Lamp"></li>
+                <li class="input-icon"><img class="" src="img/door.svg" alt="Deur"></li>
+                <li class="input-icon"><img class="" src="img/standinglamp.svg" alt="Sfeer Lamp"></li>
                 <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
                 <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
               </ul>
@@ -279,6 +259,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/new-device.js"></script>
     <script src="js/svg_buttons.js"></script>
+    <script src="js/load-data.js"></script>
+    <script src="js/load-devices.js"></script>
 
 
 

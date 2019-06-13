@@ -17,14 +17,14 @@ Deselecteren icon
 
 const nameInput = document.querySelector("#add-device");
 const saveBtn = document.querySelector(".save-device");
-const icons = document.querySelectorAll(".input-icon-device > img");
+const icons = document.querySelectorAll(".input-icon > img");
 
 saveBtn.addEventListener("click", async () => {
   const name = nameInput.value;
   const savedIcon = document.querySelector(".icon-active").src;
   const user = JSON.parse(Cookies.get("user"));
 
-  // console.log(user);
+  console.log(user);
 
   const data = {
     name: name,
@@ -32,9 +32,9 @@ saveBtn.addEventListener("click", async () => {
     user_id: user.id,
   };
 
-  // console.log(data);
+  //console.log(data);
 
-  const result = await (await fetch("/api/save/room", {
+  const result = await (await fetch("/api/save/device", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -43,7 +43,7 @@ saveBtn.addEventListener("click", async () => {
     body: JSON.stringify(data),
   })).json();
 
-  console.log(result);
+  //console.log(result);
 });
 
 icons.forEach(icon => {
