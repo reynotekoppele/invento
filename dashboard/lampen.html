@@ -202,8 +202,8 @@
                 <div class="knop col-md-3">
                   <h4>Sfeer lamp huiskamer</h4>
                 </div>
-                <div class="add-button col-md-3">
-                    <a href="lampen-sub.html">
+                <div class="add-button col-md-3" data-toggle="modal" data-target="#exampleModal">
+                
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="44"
@@ -236,9 +236,43 @@
       </div>
     </footer>
 
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Apparaten toevoegen</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="add-device">Vul hier de naam van uw nieuwe apparaat in.</label>
+                  <input id="add-device" class="" type="text" placeholder="Naam van uw nieuwe apparaat">
+                </div>
+              </form>
+  
+              <h6>Kies uw icoon</h6>
+              <ul>
+                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
+                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
+                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
+                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
+                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
+                <li class="input-icon"><img class="" src="img/wc.svg" alt="toilet"></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="save-device btn btn-primary">Save changes</button>
+            </div>
+
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/new-device.js"></script>
+    
 
     <!--<script> var winWidth = $(window).width();-->
     <!--function sidebarWidth(){-->
