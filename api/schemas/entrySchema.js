@@ -4,7 +4,7 @@ const entrySchema = new mongoose.Schema(
   {
     device_id: mongoose.Schema.Types.ObjectId,
     datetime: Date,
-    action_id: mongoose.Schema.Types.ObjectId,
+    action: String,
     user_id: mongoose.Schema.Types.ObjectId,
   },
   {

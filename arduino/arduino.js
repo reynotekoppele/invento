@@ -13,18 +13,17 @@ const showMessage = (id, action) => {
     device: `Button ${id}`,
     datetime: new Date(),
     action: action,
-    cat_id: "5ca1eec0c055f98d521044c3",
-    user_id: "5ca1ef88c055f98d521044c5",
+    user_id: "5cf27866ebe5b211ed28971f",
   };
 
-  // fetch("http://localhost:3000/api/save/entry", {
-  //   method: "POST",
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: JSON.stringify(data),
-  // }).catch(error => console.log(error));
+  fetch("http://localhost:3000/api/save/entry", {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  }).catch(error => console.log(error));
 };
 
 board.on("ready", () => {

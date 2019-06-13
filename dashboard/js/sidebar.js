@@ -1,5 +1,5 @@
-const sidebarNavTop = document.querySelector('.sidebar-nav-top');
+const sidebarNavTop = document.querySelector(".sidebar-nav-top");
 
-sidebarNavTop.classList.remove('flex-column');
+// sidebarNavTop.classList.remove('flex-column');
 
-console.log(sidebarNavTop.classList);
+// console.log(sidebarNavTop.classList);
