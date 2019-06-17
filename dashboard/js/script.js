@@ -11,9 +11,10 @@ const charts = {};
 
 const countItems = (data, label) => {
   return data.reduce((acc, item) => {
-    Object.keys(acc).includes(item[label])
-      ? acc[item[label]]++
-      : (acc[item[label]] = 1);
+    Object.keys(acc).includes(item[label]) ?
+      acc[item[label]]++
+      :
+      (acc[item[label]] = 1);
     return acc;
   }, {});
 };
@@ -27,7 +28,12 @@ const getHours = (start, end) => {
 };
 
 const getUsePerHour = args => {
-  const {data, label, start, end} = args;
+  const {
+    data,
+    label,
+    start,
+    end
+  } = args;
   const usePerHour = {};
 
   getHours(start, end).map(hour => (usePerHour[hour] = 0));
@@ -41,24 +47,50 @@ const getUsePerHour = args => {
 };
 
 const generateChart = args => {
-  const {element, data, label} = args;
+  const {
+    element,
+    data,
+    label
+  } = args;
 
   return new Chart(element, {
     type: "horizontalBar",
     data: {
       labels: Object.keys(data),
-      datasets: [
-        {
-          label: label,
-          data: Object.values(data),
-        },
-      ],
+      datasets: [{
+        label: label,
+        data: Object.values(data),
+        backgroundColor: "#c72e42",
+
+      }, ],
+      dataPoints: {
+        color: "#ff0000",
+      },
     },
+    options: {
+      scales: {
+        xAxes: [{
+          gridLines: {
+            color: " #17a2b8"
+          },
+
+        }],
+        yAxes: [{
+          gridLines: {
+            color: " #17a2b8"
+          }
+        }]
+      }
+    }
   });
 };
 
 const updateChart = args => {
-  const {chart, data, label} = args;
+  const {
+    chart,
+    data,
+    label
+  } = args;
 
   // Remove old data
   chart.data.labels.pop();
@@ -77,7 +109,11 @@ const updateChart = args => {
 };
 
 const updateHourChart = args => {
-  const {chart, data, label} = args;
+  const {
+    chart,
+    data,
+    label
+  } = args;
   // Remove old data
   chart.data.labels.pop();
   chart.data.datasets.forEach(dataset => {
@@ -146,15 +182,28 @@ const showCharts = data => {
         labels: Object.keys(formattedData3).map(
           hour => `${`0${hour}`.slice(-2)}:00`
         ),
-        datasets: [
-          {
-            label: "Gebruik per uur",
-            data: Object.values(formattedData3).map((item, i) => ({
-              t: new Date(item.datetime),
-              y: Object.values(formattedData3)[i],
-            })),
-          },
-        ],
+        datasets: [{
+          label: "Gebruik per uur",
+          data: Object.values(formattedData3).map((item, i) => ({
+            t: new Date(item.datetime),
+            y: Object.values(formattedData3)[i],
+          })),
+          backgroundColor: "#c72e42",
+        }, ],
+      },
+      options: {
+        scales: {
+          xAxes: [{
+            gridLines: {
+              color: " #17a2b8"
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              color: " #17a2b8"
+            }
+          }]
+        }
       },
     });
   } else {
