@@ -8,14 +8,10 @@
   <meta http-equiv="x-ua-compatible" content="IE-edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <script src="js/js-cookie.min.js"></script>
-  <script>
-    if (!Cookies.get("user")) {
-      window.location.href = "/login.html";
-    }
-  </script>
+
 </head>
 
-<body>
+<body onload="displayYear()">
   <main role="main">
     <header class="header">
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -55,12 +51,14 @@
         <div class="container">
           <section class="header-content">
             <div class="banner-left col-md-6 col-12">
-              <h1>Statistieken van Piet-Jan.</h1>
+              <h1>Statistieken van
+                <span class="load-data" data-value="nicename"></span>.
+              </h1>
               <span class="moreinfo"> </span>
             </div>
             <div class="banner-right col-md-6 col-12">
               <div class="banner-text">
-                <h4>Best living together, with Invento..</h4>
+                <h4>Best living together, with Invento.</h4>
               </div>
             </div>
           </section>
@@ -126,24 +124,43 @@
         </nav>
 
         <div class="col-md-10 bg-yes">
-          <section class="col-6 introductie-content">
-            <h3>Statistieken</h3>
-          </section>
-          <div class="row justify-content-center">
-            <div class="col-lg-9 text-center">
-              <h3>Dagritme</h3>
-              <canvas id="mixChart3"></canvas>
-            </div>
-            <div class="col-lg-6 text-center">
-              <h3>Vaak gebruikte acties</h3>
-              <canvas id="mixChart2"></canvas>
-            </div>
-            <div class="col-lg-6 text-center">
-              <h3>Chart Voorbeeld 3</h3>
-              <canvas id="mixChart"></canvas>
-            </div>
+          <nav class="test float-right" aria-label="breadcrumb">
+            <ol class="breadcrumb-chart">
+              <li class="breadcrumb-chart-item active" aria-current="page" data-value="year" onclick="displayYear()">Jaar</li>
+              <li class="breadcrumb-chart-item" data-value="month" onclick="displayMonth()">Maand</li>
+              <li class="breadcrumb-chart-item" data-value="day" onclick="displayDay()">Dag</li>
+            </ol>
+          </nav>
+          <div class="content-dashboard-yea">
+            <section class="col-6 introductie-content">
+              <h3>Statistieken <div id="dateDisplay">
+
+                </div>
+              </h3>
+
+            </section>
+            <section class="introductie-content dashboard-content dashboard-content-visible">
+              <div class="row justify-content-center firstchart">
+                <div class="col-lg-9 charts">
+                  <h3>Dagritme</h3>
+                  <canvas id="mixChart3"></canvas>
+                </div>
+              </div>
+              <div class="row justify-content-center">
+                <div class="col-lg-5 charts">
+                  <h3>Vaak gebruikte acties</h3>
+                  <canvas id="mixChart2"></canvas>
+                </div>
+                <div class="col-lg-5 charts">
+                  <h3>Chart Voorbeeld 3</h3>
+                  <canvas id="mixChart"></canvas>
+                </div>
+            </section>
+            <section class="introductie-content dashboard-content">BOE</section>
+            <section class="introductie-content dashboard-content">YES</section>
           </div>
         </div>
+
       </div>
     </div>
   </main>
@@ -160,6 +177,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/load-data.js"></script>
+  <script src="js/chart-switch.js"></script>
+  <script src="js/sidebar.js"></script>
 
   <!--<script> var winWidth = $(window).width();-->
   <!--function sidebarWidth(){-->

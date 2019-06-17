@@ -61,7 +61,7 @@ board.on("ready", () => {
       livingroom.toggleLightsOnOff();
       bedroom.toggleLightsOnOff();
 
-      showMessage("A", "Toggle Light Living- and Bedroom");
+      showMessage("A", "Woonkamer lampen");
     },
     // Alle lampen
     two: () => {
@@ -84,17 +84,17 @@ board.on("ready", () => {
         kitchen.unlockDoor();
       }
 
-      showMessage("B", "Toggle all lights / Lock Door");
+      showMessage("B", "Nachtstand");
     },
     // Keuken
     three: () => {
       kitchen.toggleLightsOnOff();
-      showMessage("C", "Toggle light Kitchen");
+      showMessage("C", "Keuken lampen");
     },
     // Deur
     four: () => {
       kitchen.toggleDoorOpenClose();
-      showMessage("D", "Open and Close Door");
+      showMessage("D", "Deur open/sluiten");
     },
   };
 

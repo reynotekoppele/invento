@@ -1,3 +1,42 @@
-canvas {
-  padding-bottom: 10px;
+.charts {
+  padding-bottom: 30px;
+}
+
+.firstchart {
+  background-color: var(--white);
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+.breadcrumb-chart {
+display: flex;
+flex-wrap: wrap;
+padding: 0.75rem 1rem;
+margin-bottom: 1rem;
+list-style: none;
+background-color: #e9ecef;
+border-radius: 0.25rem;
+}
+
+.breadcrumb-chart-item {
+  cursor: pointer;
+}
+
+.breadcrumb-chart-item.active {
+color: #24a2b6;
+}
+
+.breadcrumb-chart-item + .breadcrumb-chart-item {
+  padding-left: 0.5rem;
+}
+
+.breadcrumb-chart-item + .breadcrumb-chart-item::before {
+display: inline-block;
+padding-right: 0.5rem;
+color: #6c757d;
+content: "/";
+}
+
+.breadcrumb-item {
+  cursor: pointer;
 }

@@ -1,11 +1,29 @@
-(function renewData() {
-  fetch("/api/result/entry")
+Chart.defaults.global.legend.display = false;
+
+let selectedOption = "year";
+
+function renewData() {
+  const now = new Date();
+  const options = {
+    year: `year/${now.getFullYear()}`,
+    month: `month/${now.getMonth()+1}`,
+    day: `day/${now.getDate()}`
+  };
+
+  fetch(`/api/result/entry/datetime/${options[selectedOption]}`)
     .then(response => response.json())
     .then(data => showCharts(data))
     .catch(error => console.log(error));
 
   setTimeout(renewData, 5000);
-})();
+};
+renewData();
+
+const breadcrumbItems = document.querySelectorAll(".breadcrumb-chart-item");
+breadcrumbItems.forEach(item => item.addEventListener("click", () => {
+  selectedOption = item.dataset.value;
+  renewData();
+}));
 
 const charts = {};
 
@@ -62,6 +80,7 @@ const generateChart = args => {
         data: Object.values(data),
         backgroundColor: "#c72e42",
 
+
       }, ],
       dataPoints: {
         color: "#ff0000",
@@ -80,7 +99,7 @@ const generateChart = args => {
             color: " #17a2b8"
           }
         }]
-      }
+      },
     }
   });
 };
@@ -136,7 +155,7 @@ const updateHourChart = args => {
 };
 
 const showCharts = data => {
-  const formattedData = countItems(data, "device");
+  const formattedData = countItems(data, "room");
   if (!charts.deviceChart) {
     const mix = document.getElementById("mixChart").getContext("2d");
     charts.deviceChart = generateChart({
@@ -158,13 +177,13 @@ const showCharts = data => {
     charts.actionChart = generateChart({
       element: mix2,
       data: formattedData2,
-      label: "Gebruik acties",
+      // label: "Gebruik acties",
     });
   } else {
     updateChart({
       chart: charts.actionChart,
       data: formattedData2,
-      label: "Gebruik acties",
+      // label:
     });
   }
 
@@ -183,12 +202,13 @@ const showCharts = data => {
           hour => `${`0${hour}`.slice(-2)}:00`
         ),
         datasets: [{
-          label: "Gebruik per uur",
+          label: "Acties per uur",
           data: Object.values(formattedData3).map((item, i) => ({
             t: new Date(item.datetime),
             y: Object.values(formattedData3)[i],
           })),
           backgroundColor: "#c72e42",
+          borderColor: "#2d011f",
         }, ],
       },
       options: {
@@ -210,7 +230,7 @@ const showCharts = data => {
     updateHourChart({
       chart: charts.dayChart,
       data: formattedData3,
-      label: "Gebruik per uur",
+      label: "Acties per uur",
     });
   }
 };
