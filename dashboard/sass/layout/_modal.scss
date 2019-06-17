@@ -15,7 +15,8 @@
           width: 45px;
           margin: 10px;
           &.icon-active {
-            background-color: red;
+           padding:2px;
+            border:2px solid #c72e42;
           }
         }
       }

@@ -3,11 +3,11 @@
 2. icons ophalen
 3. knop ophalen
 3.1 klik toevoegen
-3. De toegevoegde naam ophalen
-3.100 class toevoegen aan geselecteerde item
-Deselecteren icon
+3.2 De toegevoegde naam ophalen
+3.3 class toevoegen aan geselecteerde item
+3.4 Deselecteren icon
 4. De geselecteerde icon ophalen
-4. url van de afbeelding
+4.1 url van de afbeelding
 5. Data opslaan
 6. huidige gebruiker ophalen
 

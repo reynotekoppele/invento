@@ -16,7 +16,7 @@ fetch("/api/result/room")
 
       //vul de roombutton met de juiste waardes
       roomButton.innerHTML = `
-        <a class='btn-knop' href='sub-page.html'>
+        <a class='btn-knop' href='sub-page.html?room=${room.name.toLowerCase()}'>
           <img class='img-size-simul svg' src='${room.icon}' alt='${room.name}'>
           <h4 class='white-text'>${room.name}</h4>
         </a>
