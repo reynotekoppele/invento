@@ -155,7 +155,7 @@ const updateHourChart = args => {
 };
 
 const showCharts = data => {
-  const formattedData = countItems(data, "room");
+  const formattedData = countItems(data, "action");
   if (!charts.deviceChart) {
     const mix = document.getElementById("mixChart").getContext("2d");
     charts.deviceChart = generateChart({
