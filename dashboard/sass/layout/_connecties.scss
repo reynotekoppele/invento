@@ -11,7 +11,7 @@
   h3 {
       color: #2D011F;
   }
-
+  
   &.connection-add:hover {
     background-color: #C72E42;
     cursor: pointer;
@@ -20,6 +20,10 @@
     color: #ffffff;
   }
 }
+}
+
+.connection-add {
+  background-color: #2D011F;
 }
 
 .connection-avatar {
@@ -33,7 +37,7 @@
   margin: 20px auto;
 }
 
-.sidebar .connection-avatar .avatar {
+img.avatar {
   height: 102%;
   width: 120%;
 }
