@@ -1,265 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Mijn huis | Piet-Jan</title>
-    <link rel="stylesheet" href="sass/style.css" />
-    <meta http-equiv="x-ua-compatible" content="IE-edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <script src="js/js-cookie.min.js"></script>
-    <script>
-      if (!Cookies.get("user")) {
-        window.location.href = "/login.html";
-      }
-    </script>
-  </head>
-  <body>
-    <main role="main">
-      <header class="header">
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
-          <div class="container">
-            <a class="navbar-brand" href="index.html">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                width="212"
-                height="40"
-                viewBox="0 0 212 40"
-              >
-                <image
-                  x="18"
-                  y="1"
-                  width="159"
-                  height="33"
-                  xlink:href="data:img/png;base64,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"
-                />
-              </svg>
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-end"
-              id="navbarNav"
-            >
-              <ul class="navbar-nav">
-                <li class="yup nav-item">
-                  <a class="nav-link" href="abonnement.html">Mijn abonnement</a>
-                </li>
-                <li class="yup nav-item">
-                  <a class="nav-link" href="notificaties.html"
-                    >Notificaties
-                    <span class="badge badge-pill badge-info">1</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mijn huis | Piet-Jan</title>
+  <link rel="stylesheet" href="sass/style.css" />
+  <meta http-equiv="x-ua-compatible" content="IE-edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <script src="js/js-cookie.min.js"></script>
+  <script>
+    if (!Cookies.get("user")) {
+      window.location.href = "/login.html";
+    }
+  </script>
+</head>
+
+<body>
+  <main role="main">
+    <header class="header">
+      <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="212" height="40" viewBox="0 0 212 40">
+              <image x="18" y="1" width="159" height="33"
+                xlink:href="data:img/png;base64,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" />
+            </svg>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="yup nav-item">
+                <a class="nav-link" href="abonnement.html">Mijn abonnement</a>
+              </li>
+              <li class="yup nav-item">
+                <a class="nav-link" href="notificaties.html">Notificaties
+                  <span class="badge badge-pill badge-info">1</span>
+                </a>
+              </li>
+              <li class="yup nav-item">
+                <a class="nav-link" href="help.html">Hulp nodig?</a>
+              </li>
+              <li class="yup nav-item">
+                <button type="button" class="btn btn-outline-info">
+                  Uitloggen
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="banner">
+        <div class="container">
+          <section class="header-content">
+            <div class="banner-left col-md-6 col-12">
+              <h1>
+                Hallo, welkom terug
+                <span class="load-data" data-value="nicename"></span>.
+              </h1>
+              <span class="moreinfo">
+                Zorgverlener, Annie Smitzs Zorgorganisatie, Zinnzorg
+              </span>
+            </div>
+            <div class="banner-right col-md-6 col-12">
+              <div class="banner-text">
+                <h4>Best living together, with Invento..</h4>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class=" col-md-2 col-sm-12 bg-light sidebar">
+          <div class="round_avatar">
+            <img src="img/lidewij.png" class="avatar load-avatar" />
+          </div>
+          <div class="sidebar-sticky align-items-stretch">
+            <ul class="navi-sidebar nav flex-column">
+              <li class="nav-item active">
+                <a class="nav-link active" href="index.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                  </svg>
+                  Mijn huis <span class="sr-only">(current)</span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="connecties.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  Connecties
+                </a>
+              </li>
+            </ul>
+            <div class="navi-sidebar">
+              <h6 class="sidebar-heading d-flex justify-content-between align-items-centermt-4 mb-1 text-muted">
+                <span class="instellingen">Instellingen</span>
+                <a class="d-flex align-items-center" href="instellingen.html">
+                </a>
+              </h6>
+              <ul class="nav flex-column mb-2">
+                <li class="nav-item">
+                  <a class="nav-link" href="instellingen.html">
+                    Algemeen
                   </a>
                 </li>
-                <li class="yup nav-item">
-                  <a class="nav-link" href="help.html">Hulp nodig?</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="lampen.html">
+                    Apparaten
+                  </a>
                 </li>
-                <li class="yup nav-item">
-                  <button type="button" class="btn btn-outline-info">
-                    Uitloggen
-                  </button>
+                <li class="nav-item">
+                  <a class="nav-link" href="sferen.html">
+                    Sferen
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
-        <div class="banner">
-          <div class="container">
-            <section class="header-content">
-              <div class="banner-left col-md-6 col-12">
-                <h1>
-                  Hallo, welkom terug
-                  <span class="load-data" data-value="nicename"></span>.
-                </h1>
-                <span class="moreinfo">
-                  Zorgverlener, Annie Smitzs Zorgorganisatie, Zinnzorg
-                </span>
-              </div>
-              <div class="banner-right col-md-6 col-12">
-                <div class="banner-text">
-                  <h4>Best living together, with Invento..</h4>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </header>
 
-      <div class="container-fluid">
-        <div class="row">
-          <nav class=" col-md-2 col-sm-12 bg-light sidebar">
-            <div class="round_avatar">
-              <img src="img/lidewij.png" class="avatar load-avatar" />
-            </div>
-            <div class="sidebar-sticky align-items-stretch">
-              <ul class="navi-sidebar nav flex-column">
-                <li class="nav-item active">
-                  <a class="nav-link active" href="index.html">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-home"
-                    >
-                      <path
-                        d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-                      ></path>
-                      <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    Mijn huis <span class="sr-only">(current)</span>
-                  </a>
-                </li>
-
-                <li class="nav-item">
-                  <a class="nav-link" href="connecties.html">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-users"
-                    >
-                      <path
-                        d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"
-                      ></path>
-                      <circle cx="9" cy="7" r="4"></circle>
-                      <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                      <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    Connecties
-                  </a>
-                </li>
-              </ul>
-              <div class="navi-sidebar">
-                <h6
-                  class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted"
-                >
-                  <span class="instellingen">Instellingen</span>
-                  <a class="d-flex align-items-center" href="instellingen.html">
-                  </a>
-                </h6>
-                <ul class="nav flex-column mb-2">
-                  <li class="nav-item">
-                    <a class="nav-link" href="instellingen.html">
-                      Algemeen
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="lampen.html">
-                      Apparaten
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sferen.html">
-                      Sferen
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-          <div class="col-md-10 bg-yes">
-            <section class="col-6 introductie-content">
-              <h3>Bedien je huis.</h3>
-              <p class="content">
-                Welkom thuis! Hier kunt u uw huis bedienen,
-              </p>
-            </section>
-            <div class="wrapper" id="rooms">
-              <div class="center-button row">
-                <div
-                  class="add-button col-md-3"
-                  data-toggle="modal"
-                  data-target="#exampleModal"
-                >
-                  Kamer toevoegen
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="44"
-                    height="44"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-plus-circle"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <line x1="12" y1="8" x2="12" y2="16"></line>
-                    <line x1="8" y1="12" x2="16" y2="12"></line>
-                  </svg>
-                </div>
+        <div class="col-md-10 bg-yes">
+          <section class="col-6 introductie-content">
+            <h3>Bedien je huis.</h3>
+            <p class="content">
+              Welkom thuis! Hier kunt u uw huis bedienen,
+            </p>
+          </section>
+          <div class="wrapper" id="rooms">
+            <div class="center-button row">
+              <div class="add-button col-md-3" data-toggle="modal" data-target="#exampleModal">
+                Kamer toevoegen
+                <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-circle">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="16"></line>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <footer class="footer mt-auto py-4">
-      <div class="container">
-        <span class=""> Makes.living much.easier.</span>
-      </div>
-    </footer>
+  <footer class="footer mt-auto py-4">
+    <div class="container">
+      <span class=""> Makes.living much.easier.</span>
+    </div>
+  </footer>
 
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Voeg hier uw kamer toe!</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="add-room">Kies hier uw kamernaam</label>
-                <input
-                  id="add-room"
-                  class=""
-                  type="text"
-                  placeholder="Jouw kamer naam"
-                />
-              </div>
-            </form>
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="add-room">Kies hier uw kamernaam</label>
+              <input id="add-room" class="" type="text" placeholder="Jouw kamer naam" />
+            </div>
+          </form>
 
             <h6>Kies uw icoon</h6>
             <ul>
@@ -299,12 +215,13 @@
       </div>
     </div>
 
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/load-data.js"></script>
-    <script src="js/new-room.js"></script>
-    <script src="js/load-rooms.js"></script>
-    <script src="js/svg_buttons.js"></script>
-  </body>
+  <script src="js/jquery-3.3.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/load-data.js"></script>
+  <script src="js/new-room.js"></script>
+  <script src="js/load-rooms.js"></script>
+  <script src="js/svg_buttons.js"></script>
+</body>
+
 </html>
