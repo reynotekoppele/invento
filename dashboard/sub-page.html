@@ -16,6 +16,7 @@
       window.location.href = "/login.html";
     }
   </script>
+  <script src="https://kit.fontawesome.com/1008d13f4c.js"></script>
 </head>
 
 <body>
@@ -96,6 +97,13 @@
                   Connecties
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="stats.html">
+                  <span class="fas fa-chart-bar fa-lg"></span>
+                  Statistieken
+                </a>
+              </li>
             </ul>
             <div class="navi-sidebar">
               <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
@@ -135,9 +143,9 @@
           </nav>
           <nav class="test float-right" aria-label="breadcrumb">
             <ol class="breadcrumb">
-              <li class="breadcrumb-item active" aria-current="page">Dagstand</li>
-              <li class="breadcrumb-item">Nachtstand</li>
-              <li class="breadcrumb-item">Gezelligheid</li>
+              <li class="breadcrumb-item active" id="dag" aria-current="page" onclick="changeActiveDay()">Dagstand</li>
+              <li class="breadcrumb-item" id="nacht" onclick="changeActiveNight()">Nachtstand</li>
+              <li class="breadcrumb-item" id="gezel" onclick="changeActiveGezel()">Gezelligheid</li>
             </ol>
           </nav>
           <div class="content-dashboard-yea">
