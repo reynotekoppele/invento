@@ -8,6 +8,12 @@ function displayYear() {
   var d = new Date();
   var year = d.getFullYear();
   document.getElementById("dateDisplay").innerHTML = year;
+  var element = document.getElementById("year");
+  element.classList.add("active");
+  var element = document.getElementById("month");
+  element.classList.remove("active");
+  var element = document.getElementById("day");
+  element.classList.remove("active");
 };
 
 function displayMonth() {
@@ -15,6 +21,12 @@ function displayMonth() {
   var n = d.getMonth() + 1;
   var name = monthNames[d.getMonth()] + " " + d.getFullYear();
   document.getElementById("dateDisplay").innerHTML = name;
+  var element = document.getElementById("month");
+  element.classList.add("active");
+  var element = document.getElementById("year");
+  element.classList.remove("active");
+  var element = document.getElementById("day");
+  element.classList.remove("active");
 };
 
 function displayDay() {
@@ -23,16 +35,11 @@ function displayDay() {
   var t = d.getDay();
   var day = dayNames[d.getDay()] + " " + d.getDate() + " " + monthNames[d.getMonth()] + " " + d.getFullYear();
   document.getElementById("dateDisplay").innerHTML = day;
-}
 
-// var day = new Date();
-// var weekday = new Array(7);
-// weekday[0] =  "Zondag";
-// weekday[1] = "Maandag";
-// weekday[2] = "Dinsdag";
-// weekday[3] = "Woensdag";
-// weekday[4] = "Donderdag";
-// weekday[5] = "Vrijdag";
-// weekday[6] = "Zaterdag";
-//
-// var dayName = weekday[day.getDay()];
+  var element = document.getElementById("day");
+  element.classList.add("active");
+  var element = document.getElementById("year");
+  element.classList.remove("active");
+  var element = document.getElementById("month");
+  element.classList.remove("active");
+}
